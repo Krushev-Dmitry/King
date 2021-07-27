@@ -7,6 +7,7 @@
 
 import UIKit
 
+@IBDesignable
 class BuildingsTableViewController: UITableViewController {
 
     override func viewDidLoad() {

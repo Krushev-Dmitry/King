@@ -117,7 +117,7 @@
             </objects>
             <point key="canvasLocation" x="1889.8550724637682" y="286.60714285714283"/>
         </scene>
-        <!--Buildings Table View Controller-->
+        <!--Постройки-->
         <scene sceneID="FN5-1X-ZT0">
             <objects>
                 <tableViewController id="Dmx-Mh-rac" customClass="BuildingsTableViewController" customModule="King" customModuleProvider="target" sceneMemberID="viewController">
@@ -140,10 +140,10 @@
                             <outlet property="delegate" destination="Dmx-Mh-rac" id="O9k-o9-mPe"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="RbN-Hh-aBS">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="bqi-yJ-r7t">
+                    <navigationItem key="navigationItem" title="Постройки" id="wGP-gE-1hu">
+                        <barButtonItem key="rightBarButtonItem" title="построить" image="plus" catalog="system" id="9we-hr-O2v">
                             <connections>
-                                <segue destination="bAt-XS-ZXi" kind="show" id="YXg-4Z-je7"/>
+                                <segue destination="bAt-XS-ZXi" kind="show" id="eS0-s3-WPI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -181,7 +181,7 @@
             </objects>
             <point key="canvasLocation" x="3811.594202898551" y="-72.321428571428569"/>
         </scene>
-        <!--Raids Table View Controller-->
+        <!--История набегов-->
         <scene sceneID="uDb-oE-EwU">
             <objects>
                 <tableViewController id="M8e-sD-6Y6" customClass="RaidsTableViewController" customModule="King" customModuleProvider="target" sceneMemberID="viewController">
@@ -190,11 +190,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dpb-mu-j2G">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="145" id="dpb-mu-j2G">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="145"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dpb-mu-j2G" id="Ut3-YD-lKN">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dpb-mu-j2G" id="Ut3-YD-lKN" customClass="RaidsTableViewCell" customModule="King" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -204,11 +204,11 @@
                             <outlet property="delegate" destination="M8e-sD-6Y6" id="qsF-Ge-z2u"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="We8-qO-AX9"/>
+                    <navigationItem key="navigationItem" title="История набегов" id="8cF-Zz-N3q"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nDh-l0-o7e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2893" y="654"/>
+            <point key="canvasLocation" x="2892.753623188406" y="653.57142857142856"/>
         </scene>
         <!--Item-->
         <scene sceneID="qsd-M6-zMm">

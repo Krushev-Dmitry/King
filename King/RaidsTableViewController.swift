@@ -7,6 +7,7 @@
 
 import UIKit
 
+@IBDesignable
 class RaidsTableViewController: UITableViewController {
 
     override func viewDidLoad() {

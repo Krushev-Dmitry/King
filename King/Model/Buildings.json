@@ -1,0 +1,254 @@
+[
+{
+  "buildingName" : "Дом",
+  "buildingCost" : {
+    "gold" : 25,
+    "scince" : 0
+  },
+  "buildingPersons" : {
+    "farmers" : 1,
+    "scientists" : 0,
+    "solders" : 0
+  },
+  "buildingProduces" : {
+    "gold" : 0,
+    "force" : 0,
+    "science" : 0,
+    "food" : 4
+  }
+},
+{
+  "buildingName" : "Амбар",
+  "buildingCost" : {
+    "gold" : 50,
+    "scince" : 0
+  },
+  "buildingPersons" : {
+    "farmers" : 2,
+    "scientists" : 0,
+    "solders" : 0
+  },
+  "buildingProduces" : {
+    "gold" : 0,
+    "force" : 0,
+    "science" : 0,
+    "food" : 10
+  }
+},
+{
+  "buildingName" : "Ферма",
+  "buildingCost" : {
+    "gold" : 400,
+    "scince" : 20
+  },
+  "buildingPersons" : {
+    "farmers" : 10,
+    "scientists" : 0,
+    "solders" : 0
+  },
+  "buildingProduces" : {
+    "gold" : 0,
+    "force" : 0,
+    "science" : 10,
+    "food" : 100
+  }
+},
+{
+  "buildingName" : "Инкубаторы",
+  "buildingCost" : {
+    "gold" : 2000,
+    "scince" : 200
+  },
+  "buildingPersons" : {
+    "farmers" : 25,
+    "scientists" : 0,
+    "solders" : 0
+  },
+  "buildingProduces" : {
+    "gold" : 0,
+    "force" : 0,
+    "science" : 70,
+    "food" : 800
+  }
+},
+{
+  "buildingName" : "Мастерская",
+  "buildingCost" : {
+    "gold" : 50,
+    "scince" : 0
+  },
+  "buildingPersons" : {
+    "farmers" : 1,
+    "scientists" : 0,
+    "solders" : 0
+  },
+  "buildingProduces" : {
+    "gold" : 0,
+    "force" : 0,
+    "science" : 4,
+    "food" : 0
+  }
+},
+{
+  "buildingName" : "Кузня",
+  "buildingCost" : {
+    "gold" : 150,
+    "scince" : 20
+  },
+  "buildingPersons" : {
+    "farmers" : 3,
+    "scientists" : 0,
+    "solders" : 0
+  },
+  "buildingProduces" : {
+    "gold" : 0,
+    "force" : 0,
+    "science" : 10,
+    "food" : 0
+  }
+},
+{
+  "buildingName" : "Цех",
+  "buildingCost" : {
+    "gold" : 600,
+    "scince" : 100
+  },
+  "buildingPersons" : {
+    "farmers" : 10,
+    "scientists" : 0,
+    "solders" : 0
+  },
+  "buildingProduces" : {
+    "gold" : 0,
+    "force" : 0,
+    "science" : 80,
+    "food" : 0
+  }
+},
+{
+  "buildingName" : "Фабрика",
+  "buildingCost" : {
+    "gold" : 5000,
+    "scince" : 1000
+  },
+  "buildingPersons" : {
+    "farmers" : 50,
+    "scientists" : 0,
+    "solders" : 0
+  },
+  "buildingProduces" : {
+    "gold" : 0,
+    "force" : 0,
+    "science" : 1000,
+    "food" : 0
+  }
+},
+{
+  "buildingName" : "Сторожевая башня",
+  "buildingCost" : {
+    "gold" : 75,
+    "scince" : 0
+  },
+  "buildingPersons" : {
+    "farmers" : 0,
+    "scientists" : 0,
+    "solders" : 1
+  },
+  "buildingProduces" : {
+    "gold" : 0,
+    "force" : 5,
+    "science" : 0,
+    "food" : 0
+  }
+},
+{
+  "buildingName" : "Казарма",
+  "buildingCost" : {
+    "gold" : 500,
+    "scince" : 50
+  },
+  "buildingPersons" : {
+    "farmers" : 0,
+    "scientists" : 0,
+    "solders" : 10
+  },
+  "buildingProduces" : {
+    "gold" : 0,
+    "force" : 50,
+    "science" : 0,
+    "food" : 0
+  }
+},
+{
+  "buildingName" : "Замок",
+  "buildingCost" : {
+    "gold" : 3000,
+    "scince" : 500
+  },
+  "buildingPersons" : {
+    "farmers" : 0,
+    "scientists" : 0,
+    "solders" : 50
+  },
+  "buildingProduces" : {
+    "gold" : 0,
+    "force" : 400,
+    "science" : 0,
+    "food" : 0
+  }
+},
+{
+  "buildingName" : "Театр одного актера",
+  "buildingCost" : {
+    "gold" : 50,
+    "scince" : 0
+  },
+  "buildingPersons" : {
+    "farmers" : 0,
+    "scientists" : 1,
+    "solders" : 0
+  },
+  "buildingProduces" : {
+    "gold" : 10,
+    "force" : 0,
+    "science" : 0,
+    "food" : 0
+  }
+},
+{
+  "buildingName" : "Литературный клуб",
+  "buildingCost" : {
+    "gold" : 150,
+    "scince" : 50
+  },
+  "buildingPersons" : {
+    "farmers" : 0,
+    "scientists" : 4,
+    "solders" : 0
+  },
+  "buildingProduces" : {
+    "gold" : 50,
+    "force" : 0,
+    "science" : 0,
+    "food" : 0
+  }
+},
+{
+  "buildingName" : "Библиотека",
+  "buildingCost" : {
+    "gold" : 500,
+    "scince" : 500
+  },
+  "buildingPersons" : {
+    "farmers" : 0,
+    "scientists" : 8,
+    "solders" : 0
+  },
+  "buildingProduces" : {
+    "gold" : 500,
+    "force" : 0,
+    "science" : 0,
+    "food" : 0
+  }
+}
+]

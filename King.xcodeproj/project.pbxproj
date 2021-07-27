@@ -28,6 +28,8 @@
 		336B48EA26B09E060076FC7A /* RaidsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B48E926B09E060076FC7A /* RaidsTableViewController.swift */; };
 		336B48EF26B0A6560076FC7A /* BuildingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B48ED26B0A6560076FC7A /* BuildingTableViewCell.swift */; };
 		336B48F026B0A6560076FC7A /* BuildingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 336B48EE26B0A6560076FC7A /* BuildingTableViewCell.xib */; };
+		336B48F526B0B89F0076FC7A /* RaidsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B48F326B0B89F0076FC7A /* RaidsTableViewCell.swift */; };
+		336B48F626B0B89F0076FC7A /* RaidsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 336B48F426B0B89F0076FC7A /* RaidsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		336B48E926B09E060076FC7A /* RaidsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaidsTableViewController.swift; sourceTree = "<group>"; };
 		336B48ED26B0A6560076FC7A /* BuildingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingTableViewCell.swift; sourceTree = "<group>"; };
 		336B48EE26B0A6560076FC7A /* BuildingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuildingTableViewCell.xib; sourceTree = "<group>"; };
+		336B48F326B0B89F0076FC7A /* RaidsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaidsTableViewCell.swift; sourceTree = "<group>"; };
+		336B48F426B0B89F0076FC7A /* RaidsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RaidsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +94,7 @@
 				33063A8B26B079F900D7C55D /* SceneDelegate.swift */,
 				33063A8D26B079F900D7C55D /* ViewController.swift */,
 				33063A8F26B079F900D7C55D /* Main.storyboard */,
-				336B48ED26B0A6560076FC7A /* BuildingTableViewCell.swift */,
-				336B48EE26B0A6560076FC7A /* BuildingTableViewCell.xib */,
+				336B48F126B0B8560076FC7A /* Cells */,
 				336B48E526B09DB10076FC7A /* BuildingsTableViewController.swift */,
 				336B48E726B09DD90076FC7A /* NewBuildingsTableViewController.swift */,
 				336B48E926B09E060076FC7A /* RaidsTableViewController.swift */,
@@ -150,6 +153,33 @@
 				336B48D626B08D480076FC7A /* ClassView.swift */,
 			);
 			path = ClassView;
+			sourceTree = "<group>";
+		};
+		336B48F126B0B8560076FC7A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				336B48F726B0B8A90076FC7A /* RaidsCell */,
+				336B48F226B0B8660076FC7A /* BuildingCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		336B48F226B0B8660076FC7A /* BuildingCell */ = {
+			isa = PBXGroup;
+			children = (
+				336B48ED26B0A6560076FC7A /* BuildingTableViewCell.swift */,
+				336B48EE26B0A6560076FC7A /* BuildingTableViewCell.xib */,
+			);
+			path = BuildingCell;
+			sourceTree = "<group>";
+		};
+		336B48F726B0B8A90076FC7A /* RaidsCell */ = {
+			isa = PBXGroup;
+			children = (
+				336B48F326B0B89F0076FC7A /* RaidsTableViewCell.swift */,
+				336B48F426B0B89F0076FC7A /* RaidsTableViewCell.xib */,
+			);
+			path = RaidsCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +243,7 @@
 				33063AB826B08A7400D7C55D /* ClassView.xib in Resources */,
 				33063A9926B079FA00D7C55D /* LaunchScreen.storyboard in Resources */,
 				336B48F026B0A6560076FC7A /* BuildingTableViewCell.xib in Resources */,
+				336B48F626B0B89F0076FC7A /* RaidsTableViewCell.xib in Resources */,
 				33063AAF26B089CF00D7C55D /* ResourceView.xib in Resources */,
 				33063A9626B079FA00D7C55D /* Assets.xcassets in Resources */,
 				336B48E226B098E90076FC7A /* PopulationView.xib in Resources */,
@@ -240,6 +271,7 @@
 				336B48EF26B0A6560076FC7A /* BuildingTableViewCell.swift in Sources */,
 				33063A9426B079F900D7C55D /* King.xcdatamodeld in Sources */,
 				33063A8C26B079F900D7C55D /* SceneDelegate.swift in Sources */,
+				336B48F526B0B89F0076FC7A /* RaidsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

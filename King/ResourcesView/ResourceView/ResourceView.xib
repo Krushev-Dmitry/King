@@ -26,7 +26,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ресурс" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hAC-fc-8tH">
-                    <rect key="frame" x="83" y="0.0" width="57" height="57"/>
+                    <rect key="frame" x="45.5" y="0.0" width="57" height="57"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -35,13 +35,13 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="hAC-fc-8tH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="h09-li-56p" secondAttribute="trailing" id="HSj-th-KcD"/>
+                <constraint firstItem="hAC-fc-8tH" firstAttribute="leading" secondItem="h09-li-56p" secondAttribute="trailing" constant="2" id="HSj-th-KcD"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hAC-fc-8tH" secondAttribute="bottom" id="Qaa-I9-tZs"/>
                 <constraint firstItem="hAC-fc-8tH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="R2B-1D-NBL"/>
                 <constraint firstItem="h09-li-56p" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Xv0-UO-sQL"/>
                 <constraint firstItem="h09-li-56p" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YbD-fH-oAm"/>
                 <constraint firstItem="hAC-fc-8tH" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="eZ9-Rb-qJD"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hAC-fc-8tH" secondAttribute="trailing" id="gNd-aM-RbC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hAC-fc-8tH" secondAttribute="trailing" id="gNd-aM-RbC"/>
                 <constraint firstAttribute="bottom" secondItem="h09-li-56p" secondAttribute="bottom" id="wTq-My-wVK"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

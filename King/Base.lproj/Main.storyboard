@@ -181,10 +181,10 @@
             </objects>
             <point key="canvasLocation" x="3811.594202898551" y="-72.321428571428569"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Raids Table View Controller-->
         <scene sceneID="uDb-oE-EwU">
             <objects>
-                <tableViewController id="M8e-sD-6Y6" sceneMemberID="viewController">
+                <tableViewController id="M8e-sD-6Y6" customClass="RaidsTableViewController" customModule="King" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eU0-8N-PoA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -1,5 +1,5 @@
 //
-//  ResourcesView.swift
+//  PopulationView.swift
 //  King
 //
 //  Created by 1111 on 27.07.21.
@@ -8,11 +8,9 @@
 import UIKit
 
 @IBDesignable
-class ResourcesView: UIView {
-    @IBOutlet weak var scince: ResourceView!
-    @IBOutlet weak var military: ResourceView!
-    @IBOutlet weak var food: ResourceView!
-    @IBOutlet weak var gold: ResourceView!
+class ClassView: UIView {
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var label: UILabel!
     
     override init(frame: CGRect) {
         super .init(frame: frame)
@@ -25,8 +23,10 @@ class ResourcesView: UIView {
     }
     
     private func configureView(){
-        guard let view = self.loadViewFromNib(nibName: "ResourcesView") else {return}
+        guard let view = self.loadViewFromNib(nibName: "ClassView") else {return}
         view.frame = self.bounds
         self.addSubview(view)
     }
+    
+    
 }

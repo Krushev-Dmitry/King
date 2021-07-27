@@ -6,15 +6,25 @@
 //
 
 import UIKit
-
+@IBDesignable
 class PopulationView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var farmers: ClassView!
+    @IBOutlet weak var soldiers: ClassView!
+    @IBOutlet weak var scientists: ClassView!
+    
+    override init(frame: CGRect) {
+        super .init(frame: frame)
+        configureView()
     }
-    */
-
+    
+    required init?(coder: NSCoder) {
+        super .init(coder: coder)
+        configureView()
+    }
+    
+    private func configureView(){
+        guard let view = self.loadViewFromNib(nibName: "PopulationView") else {return}
+        view.frame = self.bounds
+        self.addSubview(view)
+    }
 }

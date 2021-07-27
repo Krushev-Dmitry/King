@@ -35,6 +35,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="hAC-fc-8tH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="h09-li-56p" secondAttribute="trailing" id="HSj-th-KcD"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hAC-fc-8tH" secondAttribute="bottom" id="Qaa-I9-tZs"/>
                 <constraint firstItem="hAC-fc-8tH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="R2B-1D-NBL"/>
                 <constraint firstItem="h09-li-56p" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Xv0-UO-sQL"/>

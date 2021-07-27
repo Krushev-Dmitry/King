@@ -6,16 +6,24 @@
 //
 
 import UIKit
-
+@IBDesignable
 class ResourceView: UIView {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var label: UILabel!
     
     override init(frame: CGRect) {
         super .init(frame: frame)
+        configureView()
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super .init(coder: coder)
+        configureView()
+    }
+    
+    private func configureView(){
+        guard let view = self.loadViewFromNib(nibName: "ResourceView") else {return}
+        view.frame = self.bounds
+        self.addSubview(view)
     }
 }

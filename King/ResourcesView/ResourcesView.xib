@@ -21,23 +21,23 @@
             <rect key="frame" x="0.0" y="0.0" width="607" height="103"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JOc-jA-CF7">
-                    <rect key="frame" x="5" y="5" width="597" height="93"/>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JOc-jA-CF7">
+                    <rect key="frame" x="0.0" y="0.0" width="607" height="103"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PsP-UT-zsV" userLabel="science" customClass="ResourceView" customModule="King" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="142" height="93"/>
+                            <rect key="frame" x="0.0" y="0.0" width="152" height="103"/>
                             <color key="backgroundColor" systemColor="systemGray5Color"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlI-Fx-REJ" userLabel="millitary" customClass="ResourceView" customModule="King" customModuleProvider="target">
-                            <rect key="frame" x="152" y="0.0" width="141.5" height="93"/>
+                            <rect key="frame" x="152" y="0.0" width="151.5" height="103"/>
                             <color key="backgroundColor" systemColor="systemGray5Color"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w3Y-NN-5KN" userLabel="food" customClass="ResourceView" customModule="King" customModuleProvider="target">
-                            <rect key="frame" x="303.5" y="0.0" width="142" height="93"/>
+                            <rect key="frame" x="303.5" y="0.0" width="152" height="103"/>
                             <color key="backgroundColor" systemColor="systemGray5Color"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFe-cP-mVz" userLabel="gold" customClass="ResourceView" customModule="King" customModuleProvider="target">
-                            <rect key="frame" x="455.5" y="0.0" width="141.5" height="93"/>
+                            <rect key="frame" x="455.5" y="0.0" width="151.5" height="103"/>
                             <color key="backgroundColor" systemColor="systemGray5Color"/>
                         </view>
                     </subviews>
@@ -62,10 +62,10 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="JOc-jA-CF7" secondAttribute="bottom" constant="5" id="Evp-gV-2gj"/>
-                <constraint firstItem="JOc-jA-CF7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="JoO-BU-Cvb"/>
-                <constraint firstAttribute="trailing" secondItem="JOc-jA-CF7" secondAttribute="trailing" constant="5" id="grh-v2-FKa"/>
-                <constraint firstItem="JOc-jA-CF7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="msa-vO-VbF"/>
+                <constraint firstAttribute="bottom" secondItem="JOc-jA-CF7" secondAttribute="bottom" id="Evp-gV-2gj"/>
+                <constraint firstItem="JOc-jA-CF7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="JoO-BU-Cvb"/>
+                <constraint firstAttribute="trailing" secondItem="JOc-jA-CF7" secondAttribute="trailing" id="grh-v2-FKa"/>
+                <constraint firstItem="JOc-jA-CF7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="msa-vO-VbF"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="164.49275362318841" y="-171.76339285714286"/>

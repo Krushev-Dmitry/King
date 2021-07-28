@@ -10,7 +10,7 @@ import UIKit
 @IBDesignable
 class ResourcesView: UIView {
     @IBOutlet weak var scince: ResourceView!
-    @IBOutlet weak var military: ResourceView!
+    @IBOutlet weak var force: ResourceView!
     @IBOutlet weak var food: ResourceView!
     @IBOutlet weak var gold: ResourceView!
     
@@ -27,6 +27,10 @@ class ResourcesView: UIView {
     private func configureView(){
         guard let view = self.loadViewFromNib(nibName: "ResourcesView") else {return}
         view.frame = self.bounds
+        scince.image.image = #imageLiteral(resourceName: "science")
+        force.image.image = #imageLiteral(resourceName: "raid")
+        food.image.image = #imageLiteral(resourceName: "food")
+        gold.image.image = #imageLiteral(resourceName: "gold")
         self.addSubview(view)
     }
 }

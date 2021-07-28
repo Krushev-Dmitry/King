@@ -103,6 +103,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="buildingName" destination="gpN-NO-Fn9" id="2Rm-Ba-XK1"/>
+                <outlet property="gold" destination="dF4-01-IOb" id="FeI-e7-NKG"/>
+                <outlet property="population" destination="zUR-s5-puZ" id="PpJ-CC-G2Q"/>
+                <outlet property="produces" destination="oIz-wk-44V" id="1e3-Yt-ib4"/>
+                <outlet property="scince" destination="nYc-XK-sFZ" id="od7-cK-1KP"/>
+            </connections>
             <point key="canvasLocation" x="195.6521739130435" y="139.62053571428569"/>
         </tableViewCell>
     </objects>

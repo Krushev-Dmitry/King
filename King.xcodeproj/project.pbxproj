@@ -32,6 +32,8 @@
 		336B48F626B0B89F0076FC7A /* RaidsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 336B48F426B0B89F0076FC7A /* RaidsTableViewCell.xib */; };
 		336B48F926B0BF3D0076FC7A /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B48F826B0BF3D0076FC7A /* Building.swift */; };
 		336B48FC26B0C2B80076FC7A /* Buildings.json in Resources */ = {isa = PBXBuildFile; fileRef = 336B48FB26B0C2B80076FC7A /* Buildings.json */; };
+		336B48FE26B0CE220076FC7A /* Buildings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B48FD26B0CE220076FC7A /* Buildings.swift */; };
+		336B490026B0CF960076FC7A /* ConstructedBuildings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B48FF26B0CF960076FC7A /* ConstructedBuildings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		336B48F426B0B89F0076FC7A /* RaidsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RaidsTableViewCell.xib; sourceTree = "<group>"; };
 		336B48F826B0BF3D0076FC7A /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		336B48FB26B0C2B80076FC7A /* Buildings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Buildings.json; sourceTree = "<group>"; };
+		336B48FD26B0CE220076FC7A /* Buildings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buildings.swift; sourceTree = "<group>"; };
+		336B48FF26B0CF960076FC7A /* ConstructedBuildings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructedBuildings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +102,11 @@
 				33063A8B26B079F900D7C55D /* SceneDelegate.swift */,
 				33063A8D26B079F900D7C55D /* ViewController.swift */,
 				33063A8F26B079F900D7C55D /* Main.storyboard */,
-				336B48F126B0B8560076FC7A /* Cells */,
 				336B48E526B09DB10076FC7A /* BuildingsTableViewController.swift */,
 				336B48E726B09DD90076FC7A /* NewBuildingsTableViewController.swift */,
-				336B48FA26B0C1F80076FC7A /* Model */,
 				336B48E926B09E060076FC7A /* RaidsTableViewController.swift */,
+				336B48F126B0B8560076FC7A /* Cells */,
+				336B48FA26B0C1F80076FC7A /* Model */,
 				336B48DC26B0900B0076FC7A /* ResourcesView */,
 				33063AA626B0890C00D7C55D /* PopulationView */,
 				33063A9526B079FA00D7C55D /* Assets.xcassets */,
@@ -192,6 +196,8 @@
 			children = (
 				336B48FB26B0C2B80076FC7A /* Buildings.json */,
 				336B48F826B0BF3D0076FC7A /* Building.swift */,
+				336B48FD26B0CE220076FC7A /* Buildings.swift */,
+				336B48FF26B0CF960076FC7A /* ConstructedBuildings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,8 +288,10 @@
 				336B48F926B0BF3D0076FC7A /* Building.swift in Sources */,
 				336B48E626B09DB10076FC7A /* BuildingsTableViewController.swift in Sources */,
 				336B48E826B09DD90076FC7A /* NewBuildingsTableViewController.swift in Sources */,
+				336B490026B0CF960076FC7A /* ConstructedBuildings.swift in Sources */,
 				336B48D926B08E970076FC7A /* ResourcesView.swift in Sources */,
 				336B48D726B08D480076FC7A /* ClassView.swift in Sources */,
+				336B48FE26B0CE220076FC7A /* Buildings.swift in Sources */,
 				336B48EF26B0A6560076FC7A /* BuildingTableViewCell.swift in Sources */,
 				33063A9426B079F900D7C55D /* King.xcdatamodeld in Sources */,
 				33063A8C26B079F900D7C55D /* SceneDelegate.swift in Sources */,

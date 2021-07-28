@@ -11,8 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResourcesView" customModule="King" customModuleProvider="target">
             <connections>
                 <outlet property="food" destination="w3Y-NN-5KN" id="RSw-SY-EPP"/>
+                <outlet property="force" destination="xlI-Fx-REJ" id="mEq-QO-7AJ"/>
                 <outlet property="gold" destination="SFe-cP-mVz" id="d1T-1i-wvk"/>
-                <outlet property="military" destination="xlI-Fx-REJ" id="mEq-QO-7AJ"/>
                 <outlet property="scince" destination="PsP-UT-zsV" id="Vbk-y3-g7I"/>
             </connections>
         </placeholder>

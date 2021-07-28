@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class ConstructedBuildings {
+    static let shared = ConstructedBuildings()
+    var buildings = [Building]()
+    private init(){}
+    
+    func addBuilding(_ building: Building){
+        buildings += [building]
+    }
+}

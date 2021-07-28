@@ -24,6 +24,10 @@ class PopulationView: UIView {
     
     private func configureView(){
         guard let view = self.loadViewFromNib(nibName: "PopulationView") else {return}
+        farmers.image.image = #imageLiteral(resourceName: "farmer")
+        soldiers.image.image = #imageLiteral(resourceName: "solder")
+        scientists.image.image = #imageLiteral(resourceName: "scientist")
+        scientists.image.backgroundColor = .none
         view.frame = self.bounds
         self.addSubview(view)
     }

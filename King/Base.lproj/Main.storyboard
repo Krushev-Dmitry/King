@@ -66,7 +66,7 @@
                                     <constraint firstItem="l20-py-IMy" firstAttribute="leading" secondItem="3vl-i8-ZlE" secondAttribute="leading" constant="5" id="oiX-ZO-EyY"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YRV-i5-dfC">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YRV-i5-dfC" userLabel="Date">
                                 <rect key="frame" x="310" y="88" width="94" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -110,6 +110,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="fHn-qL-cs3"/>
                     <connections>
+                        <outlet property="dateLabel" destination="YRV-i5-dfC" id="AfD-xt-BWm"/>
+                        <outlet property="population" destination="loZ-Z5-eh4" id="bCw-di-OVp"/>
                         <outlet property="resourcesView" destination="faY-4I-dhP" id="Z75-sM-ipC"/>
                     </connections>
                 </viewController>

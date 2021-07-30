@@ -22,6 +22,7 @@
 		336647F226B3722400473BD7 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647F126B3722400473BD7 /* UIViewController+Alert.swift */; };
 		336647F426B385BF00473BD7 /* ConstructedBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647F326B385BF00473BD7 /* ConstructedBuilding.swift */; };
 		336647F626B3908600473BD7 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647F526B3908600473BD7 /* Date.swift */; };
+		336647F826B473E800473BD7 /* UIColor image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647F726B473E800473BD7 /* UIColor image.swift */; };
 		336B48D726B08D480076FC7A /* ClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B48D626B08D480076FC7A /* ClassView.swift */; };
 		336B48D926B08E970076FC7A /* ResourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B48D826B08E970076FC7A /* ResourcesView.swift */; };
 		336B48DB26B08EA40076FC7A /* ResourcesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 336B48DA26B08EA40076FC7A /* ResourcesView.xib */; };
@@ -60,6 +61,7 @@
 		336647F126B3722400473BD7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		336647F326B385BF00473BD7 /* ConstructedBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructedBuilding.swift; sourceTree = "<group>"; };
 		336647F526B3908600473BD7 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		336647F726B473E800473BD7 /* UIColor image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor image.swift"; sourceTree = "<group>"; };
 		336B48D626B08D480076FC7A /* ClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassView.swift; sourceTree = "<group>"; };
 		336B48D826B08E970076FC7A /* ResourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesView.swift; sourceTree = "<group>"; };
 		336B48DA26B08EA40076FC7A /* ResourcesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResourcesView.xib; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				33063A9A26B079FA00D7C55D /* Info.plist */,
 				336B48DD26B093F90076FC7A /* Extention */,
 				33063A9226B079F900D7C55D /* King.xcdatamodeld */,
+				336647F726B473E800473BD7 /* UIColor image.swift */,
 				336647F126B3722400473BD7 /* UIViewController+Alert.swift */,
 			);
 			path = King;
@@ -327,6 +330,7 @@
 				33063A8A26B079F900D7C55D /* AppDelegate.swift in Sources */,
 				336B48EA26B09E060076FC7A /* RaidsTableViewController.swift in Sources */,
 				336B48DF26B094150076FC7A /* UIView+xib.swift in Sources */,
+				336647F826B473E800473BD7 /* UIColor image.swift in Sources */,
 				336647F026B36A8B00473BD7 /* BuildingsTableViewController.swift in Sources */,
 				336647F426B385BF00473BD7 /* ConstructedBuilding.swift in Sources */,
 				336647F226B3722400473BD7 /* UIViewController+Alert.swift in Sources */,

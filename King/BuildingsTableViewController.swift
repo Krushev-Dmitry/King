@@ -87,7 +87,10 @@ class BuildingsTableViewController: UITableViewController {
                 switch(option) {
                     case 1:
                         self.buildings.buildings[index].use()
-                        self.tableView.reloadData()
+                        if let cell = self.tableView.cellForRow(at: IndexPath(row: index, section: 0)) as? BuildingTableViewCell{
+                            cell.buildingUsed(true)
+                        }
+//                        self.tableView.reloadData()
                         break
                     default:
                         break

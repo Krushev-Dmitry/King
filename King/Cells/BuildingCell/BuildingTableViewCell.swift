@@ -8,6 +8,7 @@
 import UIKit
 
 class BuildingTableViewCell: UITableViewCell {
+    @IBOutlet weak var isUsed: UIImageView!
     @IBOutlet weak var buildingName: UILabel!
     @IBOutlet weak var gold: ResourceView!
     @IBOutlet weak var scince: ResourceView!
@@ -27,6 +28,8 @@ class BuildingTableViewCell: UITableViewCell {
     
     func configureCell(_ building: Building){
         self.building = building
+        self.isUsed.isHidden = true
+        self.isUsed.layer.cornerRadius = self.isUsed.frame.height/2
         buildingName.text = building.buildingName
        
         gold.label.text =
@@ -42,6 +45,17 @@ class BuildingTableViewCell: UITableViewCell {
         produces.food.label.text = String(building.buildingProduces.food)
         produces.force.label.text = String(building.buildingProduces.force)
         produces.scince.label.text = String(building.buildingProduces.science)
+    }
+    
+    func buildingUsed(_ used: Bool){
+        if used {
+            isUsed.isHidden = false
+            isUsed.image = UIColor.green.image()
+        } else {
+            isUsed.isHidden = false
+            isUsed.image = UIColor.red.image()
+        }
+        self.reloadInputViews()
     }
     
 }

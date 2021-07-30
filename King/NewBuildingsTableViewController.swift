@@ -31,6 +31,7 @@ class NewBuildingsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "BuildingTableViewCell", for: indexPath) as? BuildingTableViewCell else {return UITableViewCell()}
         cell.configureCell(buildings[indexPath.row])
+        
         return cell
     }
     
@@ -47,7 +48,7 @@ class NewBuildingsTableViewController: UITableViewController {
     }
     
     func addBuilding(_ building: Building){
-        if Resources.shared.gold>=building.buildingCost.gold, Resources.shared.scince>=building.buildingCost.scince{
+        if building.checkBuildingCost(){
             self.presentAlertWithTitle(title: "Построить здание?", message: "Вы уверены, что хотите построить это здание", options: "Нет", "Да") { (option) in
                 switch(option) {
                     case 1:

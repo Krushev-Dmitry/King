@@ -26,7 +26,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="популяция" textAlignment="natural" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1y-uW-Inn">
-                    <rect key="frame" x="55.5" y="0.0" width="84.5" height="57"/>
+                    <rect key="frame" x="43.5" y="0.0" width="84.5" height="57"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -39,8 +39,8 @@
                 <constraint firstItem="iyp-d3-IbW" firstAttribute="leading" secondItem="kf4-ah-hFB" secondAttribute="leading" id="AGF-YJ-sNb"/>
                 <constraint firstItem="d1y-uW-Inn" firstAttribute="centerY" secondItem="kf4-ah-hFB" secondAttribute="centerY" id="HJj-pY-Fd5"/>
                 <constraint firstAttribute="bottom" secondItem="iyp-d3-IbW" secondAttribute="bottom" id="XC1-Bs-kWV"/>
-                <constraint firstItem="3Wj-Rk-LwA" firstAttribute="trailing" secondItem="d1y-uW-Inn" secondAttribute="trailing" id="Xgt-2K-MGz"/>
-                <constraint firstItem="d1y-uW-Inn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iyp-d3-IbW" secondAttribute="trailing" id="mSR-D9-gbH"/>
+                <constraint firstItem="3Wj-Rk-LwA" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="d1y-uW-Inn" secondAttribute="trailing" id="Xgt-2K-MGz"/>
+                <constraint firstItem="d1y-uW-Inn" firstAttribute="leading" secondItem="iyp-d3-IbW" secondAttribute="trailing" id="mSR-D9-gbH"/>
                 <constraint firstItem="iyp-d3-IbW" firstAttribute="top" secondItem="kf4-ah-hFB" secondAttribute="top" id="nSo-7r-rKm"/>
                 <constraint firstItem="3Wj-Rk-LwA" firstAttribute="bottom" secondItem="d1y-uW-Inn" secondAttribute="bottom" id="scN-hJ-41k"/>
             </constraints>

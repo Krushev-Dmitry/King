@@ -12,7 +12,6 @@ class Population {
     var farmers = Farmer(count: 3)
     var scientists = Scientist(count: 1)
     var soldiers = Soldier(count: 1)
-    
     private init(){}
 }
 
@@ -73,7 +72,7 @@ extension Population{
     }
     
     func description(){
-        print("farmers: \(farmers.count); soldiers: \(soldiers.count); scientists: \(scientists.count)")
+        print("farmers: \(farmers.busy)/\(farmers.count); soldiers: \(soldiers.busy)/\(soldiers.count); scientists: \(scientists.busy)/\(scientists.count)")
     }
 }
 

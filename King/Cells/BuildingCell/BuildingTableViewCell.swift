@@ -13,6 +13,7 @@ class BuildingTableViewCell: UITableViewCell {
     @IBOutlet weak var scince: ResourceView!
     @IBOutlet weak var population: PopulationView!
     @IBOutlet weak var produces: ResourcesView!
+    var building: Building?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +26,7 @@ class BuildingTableViewCell: UITableViewCell {
     }
     
     func configureCell(_ building: Building){
+        self.building = building
         buildingName.text = building.buildingName
        
         gold.label.text =

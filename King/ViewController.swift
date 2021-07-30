@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var population: PopulationView!
     @IBOutlet weak var resourcesView : ResourcesView!
     @IBOutlet weak var dateLabel: UILabel!
-    var dateInt: Int = 1
+    var currentDate = CurrentDate.shared
     let farmers = Population.shared.farmers
     let scientists = Population.shared.scientists
     let soldiers = Population.shared.soldiers
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        dateLabel.text = String(dateInt)
+        dateLabel.text = String(currentDate.dateInt)
         fillPopulationData()
         resourceUpdait()
         
@@ -56,9 +56,9 @@ class ViewController: UIViewController {
     }
     
     func updateDate(){
-        self.dateInt += 1
-        dateLabel.text = String(dateInt)
-        if self.dateInt.isMultiple(of: farmers.fertility) {
+        self.currentDate.dateInt += 1
+        dateLabel.text = String(currentDate.dateInt)
+        if self.currentDate.dateInt.isMultiple(of: farmers.fertility) {
             Population.shared.description()
             print(farmers.count/2)
             for _ in 1...(farmers.count/2) {
@@ -66,6 +66,7 @@ class ViewController: UIViewController {
             }
             fillPopulationData()
         }
+
         resourceUpdait()
     }
     

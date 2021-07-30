@@ -43,36 +43,58 @@ class BuildingsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
         let contextMenu = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { _ in
-            let populateBuilding = UIAction(title: "Заселить здание", image: UIImage(systemName: ""), attributes: []) { _ in
+            
+            var useBuilding = UIAction(title: "Заселить здание", image: UIImage(systemName: ""), attributes: []) { _ in
                 self.useBuilding(indexPath.row)
+            }
+            if self.buildings.buildings[indexPath.row].used {
+                useBuilding = UIAction(title: "Расселить здание", image: UIImage(systemName: ""), attributes: []) { _ in
+                    self.presentAlertWithTitle(title: "Расселить здание?", message: "Вы уверены, что хотите расселить это здание?", options: "Нет", "Да") { (option) in
+                        switch(option) {
+                            case 1:
+                                self.buildings.buildings[indexPath.row].notUse()
+                                self.tableView.reloadData()
+                                break
+                            default:
+                                break
+                        }
+                    }                }
             }
             let destroyBuilding = UIAction(title: "Снести здание", image: UIImage(systemName: "trash"), attributes: [.destructive]) { _ in
                 print("Здание \(self.buildings.buildings[indexPath.row].building.buildingName) снесено")
-                self.buildings.destroy(index: indexPath.row)
-                self.tableView.reloadData()
+                self.presentAlertWithTitle(title: "Снести здание?", message: "Вы уверены, что хотите снести это здание?", options: "Нет", "Да") { (option) in
+                    switch(option) {
+                        case 1:
+                            self.buildings.destroy(index: indexPath.row)
+                            self.tableView.reloadData()
+                            break
+                        default:
+                            break
+                    }
+                }
+
             }
-            return UIMenu(title: "", children: [populateBuilding,destroyBuilding])
+            return UIMenu(title: "", children: [useBuilding,destroyBuilding])
         }
         
         return contextMenu
     }
     
     func useBuilding(_ index: Int){
-//        let population = Population.shared
-//        var building = buildings.buildings[index]
-//        if building.checkToUse(){
-//            self.presentAlertWithTitle(title: "Заселить здание?", message: "Вы уверены, что хотите построить это здание", options: "Нет", "Да") { (option) in
-//                switch(option) {
-//                    case 1:
-//                        building.use()
-//                        self.tableView.reloadData()
-//                        break
-//                    default:
-//                        break
-//                }
-//            }
-//        } else {
-//            self.presentAlertWithTitle(title: "Недостаточно людей для заселения постройки", message: "", options: "Ок"){_ in }
-//        }
+        let population = Population.shared
+        if buildings.buildings[index].checkToUse(){
+            self.presentAlertWithTitle(title: "Заселить здание?", message: "Вы уверены, что хотите построить это здание?", options: "Нет", "Да") { (option) in
+                switch(option) {
+                    case 1:
+                        self.buildings.buildings[index].use()
+                        self.tableView.reloadData()
+                        break
+                    default:
+                        break
+                }
+            }
+        } else {
+            self.presentAlertWithTitle(title: "Недостаточно людей для заселения постройки", message: "", options: "Ок"){_ in }
+        }
     }
 }

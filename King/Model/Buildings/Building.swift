@@ -30,3 +30,4 @@ struct BuildingProduces:Codable {
     let gold: Int
     let food: Int
 }
+

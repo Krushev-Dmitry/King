@@ -16,6 +16,19 @@ class Resources {
     static let shared = Resources()
     private init(){}
     
+    func takeResources(_ collectedResources: BuildingProduces){
+        food += collectedResources.food
+        gold += collectedResources.gold
+    }
+    
+    func beginUse(_ collectedResources: BuildingProduces){
+        scince += collectedResources.science
+        force += collectedResources.force
+    }
+    func stopUse(_ collectedResources: BuildingProduces){
+        scince -= collectedResources.science
+        force -= collectedResources.force
+    }
     func description(){
         print("scince: \(scince); force: \(force); food: \(food); gold: \(gold)")
     }

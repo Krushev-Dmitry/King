@@ -10,6 +10,7 @@ import Foundation
 class ConstructedBuilding{
     let building: Building
     var used = false
+    var dateWhenBeginBuildingUsed: Int = 0
     init(_ building: Building) {
         self.building = building
     }
@@ -28,6 +29,8 @@ class ConstructedBuilding{
         population.soldiers.busy += building.buildingPersons.solders
         print("Здание заселено и используется \(building.buildingName)")
         used = true
+        Resources.shared.beginUse(building.buildingProduces)
+        dateWhenBeginBuildingUsed = CurrentDate.shared.dateInt
     }
     
     func notUse(){
@@ -36,6 +39,7 @@ class ConstructedBuilding{
         population.scientists.busy -= building.buildingPersons.scientists
         population.soldiers.busy -= building.buildingPersons.solders
         print("Здание расселено и не используется \(building.buildingName)")
+        Resources.shared.stopUse(building.buildingProduces)
         self.used = false
     }
     

@@ -12,6 +12,14 @@ struct Building:Codable {
     let buildingCost: BuildingCost
     let buildingPersons: BuildingPersons
     let buildingProduces: BuildingProduces
+    
+    func checkBuildingCost()->Bool{
+        let resources = Resources.shared
+        if buildingCost.gold<=resources.gold, buildingCost.scince <= resources.scince {
+        return true
+        }
+        return false
+    }
 }
 
 struct BuildingCost:Codable {

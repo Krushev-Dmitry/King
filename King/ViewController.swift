@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var population: PopulationView!
     @IBOutlet weak var resourcesView : ResourcesView!
     @IBOutlet weak var dateLabel: UILabel!
-    var dateInt = 0
+    var dateInt: Int = 1
     let farmers = Population.shared.farmers
     let scientists = Population.shared.scientists
     let soldiers = Population.shared.soldiers
@@ -21,11 +21,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        dateLabel.text = String(dateInt)
         fillPopulationData()
+        resourceUpdait()
         
         
-        let timer3 = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+        let timer3 = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { [weak self] _ in
             DispatchQueue.main.async {
                 self?.updateDate()
             }
@@ -34,9 +35,9 @@ class ViewController: UIViewController {
     }
     
     func fillPopulationData(){
-        population.farmers.label.text =  String(farmers.count)
-        population.scientists.label.text = String(scientists.count)
-        population.soldiers.label.text = String(soldiers.count)
+        population.farmers.label.text =  "\(farmers.busy)/\(farmers.count)"
+        population.scientists.label.text = "\(scientists.busy)/\(scientists.count)"
+        population.soldiers.label.text = "\(soldiers.busy)/\(soldiers.count)"
     }
     func fillResourcesDate() {
         resourcesView.scince.label.text = String(resources.scince)

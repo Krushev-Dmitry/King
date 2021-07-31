@@ -14,6 +14,8 @@ class NewBuildingsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        CurrentDate.shared.appendDelegate(self)
         tableView.register(UINib(nibName: "BuildingTableViewCell", bundle: nil), forCellReuseIdentifier: "BuildingTableViewCell")
     }
 
@@ -36,11 +38,14 @@ class NewBuildingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        guard let cell = tableView.cellForRow(at: indexPath) as? BuildingTableViewCell else {return nil}
+        guard let building = cell.building else {return nil}
         let contextMenu = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { _ in
             let addNewBuilding = UIAction(title: "Построить здание", image: UIImage(systemName: "plus"), attributes: []) { _ in
-                guard let cell = tableView.cellForRow(at: indexPath) as? BuildingTableViewCell else {return}
-                guard let building = cell.building else {return}
                 self.addBuilding(building)
+            }
+            if !building.checkBuildingCost() {
+                addNewBuilding.attributes = .disabled
             }
             return UIMenu(title: "", children: [addNewBuilding])
         }
@@ -48,20 +53,30 @@ class NewBuildingsTableViewController: UITableViewController {
     }
     
     func addBuilding(_ building: Building){
-        if building.checkBuildingCost(){
-            self.presentAlertWithTitle(title: "Построить здание?", message: "Вы уверены, что хотите построить это здание", options: "Нет", "Да") { (option) in
+        if !building.checkToUse() {
+            self.presentAlertWithTitle(title: "Не хватает людей для заселения здания", message: "Все равно построить?", options: "Нет", "Да") { (option) in
                 switch(option) {
                     case 1:
-                        Resources.shared.gold -= building.buildingCost.gold
-                        ConstructedBuildings.shared.buildings += [ConstructedBuilding(building)]
-                        print("построено новое здание \(building.buildingName)")
+                        ConstructedBuildings.shared.addNewBuilding(building, isUsed: false)
+                        print("построено новое здание \(building.buildingName), но не заселено")
                         break
                     default:
                         break
                 }
             }
         } else {
-            self.presentAlertWithTitle(title: "Недостаточно ресурсов для постройки", message: "", options: "Ок"){_ in }
+            ConstructedBuildings.shared.addNewBuilding(building, isUsed: true)
+            print("построено новое здание \(building.buildingName),и заселено")
         }
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super .viewDidDisappear(animated)
+        CurrentDate.shared.removeDelegate(self)
+    }
+}
+
+extension NewBuildingsTableViewController: ChangeDateProtocol {
+    func dateChanged(date: Int) {
+
     }
 }

@@ -6,41 +6,62 @@
 //
 
 import Foundation
+protocol BuildingUsedProtocol: Any {
+    func useBuilding(_ used: Bool)
+}
 
 class ConstructedBuilding{
     let building: Building
     var used = false
+    var delegate: BuildingUsedProtocol?
+    
     var dateWhenBeginBuildingUsed: Int = 0
-    init(_ building: Building) {
+    
+    init(_ building: Building, used: Bool = false) {
         self.building = building
+        self.used = used
+        Resources.shared.gold -= building.buildingCost.gold
+        dateWhenBeginBuildingUsed = CurrentDate.shared.dateInt
+        delegate = nil
     }
     
-    func checkToUse()->Bool{
-        let population = Population.shared
-        guard population.farmers.free()>=building.buildingPersons.farmers else {return false}
-        guard population.scientists.free()>=building.buildingPersons.scientists else {return false}
-        guard population.soldiers.free()>=building.buildingPersons.solders else {return false}
-        return true
-    }
     func use(){
-        let population = Population.shared
-        population.farmers.busy += building.buildingPersons.farmers
-        population.scientists.busy += building.buildingPersons.scientists
-        population.soldiers.busy += building.buildingPersons.solders
+        self.used = true
         print("Здание заселено и используется \(building.buildingName)")
-        used = true
-        Resources.shared.beginUse(building.buildingProduces)
+        delegate?.useBuilding(used)
+        changeResources()
         dateWhenBeginBuildingUsed = CurrentDate.shared.dateInt
     }
     
     func notUse(){
-        let population = Population.shared
-        population.farmers.busy -= building.buildingPersons.farmers
-        population.scientists.busy -= building.buildingPersons.scientists
-        population.soldiers.busy -= building.buildingPersons.solders
-        print("Здание расселено и не используется \(building.buildingName)")
-        Resources.shared.stopUse(building.buildingProduces)
         self.used = false
+        print("Здание расселено и не используется \(building.buildingName)")
+        delegate?.useBuilding(used)
+        changePopulation()
+        changeResources()
+    }
+    
+    func changePopulation(){
+        let population = Population.shared
+        if used {
+            population.farmers.busy += building.buildingPersons.farmers
+            population.scientists.busy += building.buildingPersons.scientists
+            population.soldiers.busy += building.buildingPersons.solders
+        } else {
+            population.farmers.busy -= building.buildingPersons.farmers
+            population.scientists.busy -= building.buildingPersons.scientists
+            population.soldiers.busy -= building.buildingPersons.solders
+        }
+    }
+    func changeResources(){
+        let resources = Resources.shared
+        if used {
+            resources.scince += building.buildingProduces.science
+            resources.force += building.buildingProduces.force
+        } else {
+            resources.scince -= building.buildingProduces.science
+            resources.force -= building.buildingProduces.force
+        }
     }
     
 }

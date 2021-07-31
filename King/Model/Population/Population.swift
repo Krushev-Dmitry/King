@@ -12,7 +12,9 @@ class Population {
     var farmers = Farmer(count: 3)
     var scientists = Scientist(count: 1)
     var soldiers = Soldier(count: 1)
-    private init(){}
+    private init(){
+        CurrentDate.shared.appendDelegate(self)
+    }
 }
 
 extension Population{
@@ -71,8 +73,27 @@ extension Population{
         }
     }
     
+    func birthNewPersons(){
+        let currentDate = CurrentDate.shared
+        if currentDate.dateInt.isMultiple(of: farmers.fertility) {
+            Population.shared.description()
+            print(farmers.count/2)
+            for _ in 1...(farmers.count/2) {
+                farmers.birth()
+            }
+        }
+    }
+    
     func description(){
         print("farmers: \(farmers.busy)/\(farmers.count); soldiers: \(soldiers.busy)/\(soldiers.count); scientists: \(scientists.busy)/\(scientists.count)")
     }
+    
 }
 
+extension Population:ChangeDateProtocol {
+    func dateChanged(date: Int) {
+        birthNewPersons()
+    }
+    
+    
+}

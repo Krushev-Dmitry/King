@@ -41,6 +41,8 @@
 		336B490026B0CF960076FC7A /* ConstructedBuildings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B48FF26B0CF960076FC7A /* ConstructedBuildings.swift */; };
 		336B490326B25D150076FC7A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B490226B25D150076FC7A /* Person.swift */; };
 		336B490526B25D7B0076FC7A /* Population.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B490426B25D7B0076FC7A /* Population.swift */; };
+		33BAEB6126B56F21001FB528 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BAEB6026B56F21001FB528 /* DetailView.swift */; };
+		33BAEB6526B582BC001FB528 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BAEB6426B582BC001FB528 /* DetailView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		336B48FF26B0CF960076FC7A /* ConstructedBuildings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructedBuildings.swift; sourceTree = "<group>"; };
 		336B490226B25D150076FC7A /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		336B490426B25D7B0076FC7A /* Population.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Population.swift; sourceTree = "<group>"; };
+		33BAEB6026B56F21001FB528 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		33BAEB6426B582BC001FB528 /* DetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +125,7 @@
 				336B48E926B09E060076FC7A /* RaidsTableViewController.swift */,
 				336B48F126B0B8560076FC7A /* Cells */,
 				336B48FA26B0C1F80076FC7A /* Model */,
-				336B48DC26B0900B0076FC7A /* ResourcesView */,
-				33063AA626B0890C00D7C55D /* PopulationView */,
+				33BAEB5F26B56EDC001FB528 /* View */,
 				33063A9526B079FA00D7C55D /* Assets.xcassets */,
 				33063A9726B079FA00D7C55D /* LaunchScreen.storyboard */,
 				33063A9A26B079FA00D7C55D /* Info.plist */,
@@ -247,6 +250,17 @@
 			path = Buildings;
 			sourceTree = "<group>";
 		};
+		33BAEB5F26B56EDC001FB528 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33BAEB6026B56F21001FB528 /* DetailView.swift */,
+				33BAEB6426B582BC001FB528 /* DetailView.xib */,
+				336B48DC26B0900B0076FC7A /* ResourcesView */,
+				33063AA626B0890C00D7C55D /* PopulationView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,6 +328,7 @@
 				33063A9626B079FA00D7C55D /* Assets.xcassets in Resources */,
 				336B48E226B098E90076FC7A /* PopulationView.xib in Resources */,
 				33063A9126B079F900D7C55D /* Main.storyboard in Resources */,
+				33BAEB6526B582BC001FB528 /* DetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +347,7 @@
 				336B48DF26B094150076FC7A /* UIView+xib.swift in Sources */,
 				336647F826B473E800473BD7 /* UIColor image.swift in Sources */,
 				336647F026B36A8B00473BD7 /* BuildingsTableViewController.swift in Sources */,
+				33BAEB6126B56F21001FB528 /* DetailView.swift in Sources */,
 				336647F426B385BF00473BD7 /* ConstructedBuilding.swift in Sources */,
 				336647F226B3722400473BD7 /* UIViewController+Alert.swift in Sources */,
 				33063AB126B089DB00D7C55D /* ResourceView.swift in Sources */,

@@ -10,6 +10,7 @@ import UIKit
 @IBDesignable
 class BuildingsTableViewController: UITableViewController {
 
+    @IBOutlet weak var detailView: UIView!
     var buildings = ConstructedBuildings.shared
     
     override func viewDidLoad() {
@@ -81,6 +82,12 @@ class BuildingsTableViewController: UITableViewController {
         }
         
         return contextMenu
+    }
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return DetailView(frame: .null)
+    }
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 100
     }
     
 }

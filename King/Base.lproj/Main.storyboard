@@ -58,50 +58,15 @@
                                     <constraint firstItem="l20-py-IMy" firstAttribute="leading" secondItem="3vl-i8-ZlE" secondAttribute="leading" constant="5" id="oiX-ZO-EyY"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2e-Bs-Z3T" userLabel="DetailView">
-                                <rect key="frame" x="0.0" y="88" width="414" height="94"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YRV-i5-dfC" userLabel="Date">
-                                        <rect key="frame" x="300" y="-6" width="114" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="jfe-EH-pOf"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faY-4I-dhP" userLabel="resources" customClass="ResourcesView" customModule="King" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44" width="414" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="FhG-4j-dDt"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="loZ-Z5-eh4" userLabel="population" customClass="PopulationView" customModule="King" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="gGV-et-aXy"/>
-                                            <constraint firstAttribute="width" constant="300" id="rJF-HU-sjb"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N2e-Bs-Z3T" userLabel="DetailView" customClass="DetailView" customModule="King" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="loZ-Z5-eh4" secondAttribute="bottom" constant="44" id="2Uq-Xy-vhX"/>
-                                    <constraint firstItem="YRV-i5-dfC" firstAttribute="leading" secondItem="loZ-Z5-eh4" secondAttribute="trailing" id="6j7-MR-c5u"/>
-                                    <constraint firstItem="loZ-Z5-eh4" firstAttribute="leading" secondItem="N2e-Bs-Z3T" secondAttribute="leading" id="aee-NL-Xa4"/>
-                                    <constraint firstItem="faY-4I-dhP" firstAttribute="leading" secondItem="N2e-Bs-Z3T" secondAttribute="leading" id="dn2-Ji-zq9"/>
-                                    <constraint firstAttribute="trailing" secondItem="YRV-i5-dfC" secondAttribute="trailing" id="e8z-Up-o1F"/>
-                                    <constraint firstItem="faY-4I-dhP" firstAttribute="top" secondItem="YRV-i5-dfC" secondAttribute="bottom" id="gzk-6p-HY2"/>
-                                    <constraint firstItem="loZ-Z5-eh4" firstAttribute="top" secondItem="N2e-Bs-Z3T" secondAttribute="top" id="iT2-Mr-lFa"/>
-                                    <constraint firstItem="faY-4I-dhP" firstAttribute="top" secondItem="loZ-Z5-eh4" secondAttribute="bottom" constant="-6" id="krG-14-L10"/>
-                                    <constraint firstAttribute="bottom" secondItem="faY-4I-dhP" secondAttribute="bottom" id="njH-fd-LLS"/>
-                                    <constraint firstAttribute="trailing" secondItem="faY-4I-dhP" secondAttribute="trailing" id="uK4-ka-St0"/>
+                                    <constraint firstAttribute="height" constant="100" id="wyC-ta-piv"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Mb-SY-kaG" userLabel="TimerForRaids">
-                                <rect key="frame" x="10" y="282" width="200" height="100"/>
+                                <rect key="frame" x="10" y="288" width="200" height="100"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="MeU-x8-1Tm"/>
@@ -112,11 +77,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="N2e-Bs-Z3T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0M7-WP-Uxf"/>
+                            <constraint firstItem="N2e-Bs-Z3T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0M7-WP-Uxf"/>
                             <constraint firstItem="3vl-i8-ZlE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="70e-5e-p1v"/>
                             <constraint firstItem="N2e-Bs-Z3T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EvY-78-fZa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3vl-i8-ZlE" secondAttribute="bottom" constant="30" id="LFW-hz-FbY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N2e-Bs-Z3T" secondAttribute="trailing" id="M6C-IH-wmA"/>
+                            <constraint firstAttribute="trailing" secondItem="N2e-Bs-Z3T" secondAttribute="trailing" id="M6C-IH-wmA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R9z-d9-L0M" secondAttribute="bottom" constant="30" id="ckr-dw-qf9"/>
                             <constraint firstItem="8Mb-SY-kaG" firstAttribute="top" secondItem="N2e-Bs-Z3T" secondAttribute="bottom" constant="100" id="fOv-RH-Ahn"/>
                             <constraint firstItem="8Mb-SY-kaG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="igD-Se-nF3"/>
@@ -124,12 +89,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fHn-qL-cs3"/>
-                    <connections>
-                        <outlet property="dateLabel" destination="YRV-i5-dfC" id="AfD-xt-BWm"/>
-                        <outlet property="detailView" destination="N2e-Bs-Z3T" id="MdQ-Dn-deY"/>
-                        <outlet property="population" destination="loZ-Z5-eh4" id="bCw-di-OVp"/>
-                        <outlet property="resourcesView" destination="faY-4I-dhP" id="Z75-sM-ipC"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,7 +98,7 @@
         <scene sceneID="FN5-1X-ZT0">
             <objects>
                 <tableViewController id="Dmx-Mh-rac" customClass="BuildingsTableViewController" customModule="King" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pt2-uu-AXf">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pt2-uu-AXf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -174,7 +133,7 @@
         <scene sceneID="Res-q8-CmT">
             <objects>
                 <tableViewController id="bAt-XS-ZXi" customClass="NewBuildingsTableViewController" customModule="King" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7tb-7u-DwY">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7tb-7u-DwY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -255,6 +214,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

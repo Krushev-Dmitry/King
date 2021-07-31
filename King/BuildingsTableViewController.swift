@@ -35,7 +35,7 @@ class BuildingsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BuildingTableViewCell", for: indexPath) as? BuildingTableViewCell
-        cell?.configureCell(buildings.buildings[indexPath.row].building)
+        cell?.configureCell(buildings.buildings[indexPath.row])
         // Configure the cell...
 
         return cell ?? UITableViewCell()
@@ -53,7 +53,6 @@ class BuildingsTableViewController: UITableViewController {
                         switch(option) {
                             case 1:
                                 self.buildings.buildings[indexPath.row].notUse()
-                                self.tableView.reloadData()
                                 break
                             default:
                                 break
@@ -82,15 +81,11 @@ class BuildingsTableViewController: UITableViewController {
     
     func useBuilding(_ index: Int){
         let population = Population.shared
-        if buildings.buildings[index].checkToUse(){
+        if buildings.buildings[index].building.checkToUse(){
             self.presentAlertWithTitle(title: "Заселить здание?", message: "Вы уверены, что хотите построить это здание?", options: "Нет", "Да") { (option) in
                 switch(option) {
                     case 1:
                         self.buildings.buildings[index].use()
-                        if let cell = self.tableView.cellForRow(at: IndexPath(row: index, section: 0)) as? BuildingTableViewCell{
-                            cell.buildingUsed(true)
-                        }
-//                        self.tableView.reloadData()
                         break
                     default:
                         break

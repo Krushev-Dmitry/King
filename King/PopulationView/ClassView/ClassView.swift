@@ -24,6 +24,7 @@ class ClassView: UIView {
     
     private func configureView(){
         guard let view = self.loadViewFromNib(nibName: "ClassView") else {return}
+        image.layer.cornerRadius = image.frame.height/2
         view.frame = self.bounds
         self.addSubview(view)
     }

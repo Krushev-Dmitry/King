@@ -31,9 +31,8 @@ class BuildingTableViewCell: UITableViewCell {
         self.isUsed.isHidden = true
         self.isUsed.layer.cornerRadius = self.isUsed.frame.height/2
         buildingName.text = building.buildingName
-       
-        gold.label.text =
-            String(building.buildingCost.gold)
+        
+        gold.label.text = String(building.buildingCost.gold)
         scince.label.text = String(building.buildingCost.scince)
 
 
@@ -47,7 +46,15 @@ class BuildingTableViewCell: UITableViewCell {
         produces.scince.label.text = String(building.buildingProduces.science)
     }
     
-    func buildingUsed(_ used: Bool){
+    func configureCell(_ constructedBuilding: ConstructedBuilding){
+        constructedBuilding.delegate = self
+        configureCell(constructedBuilding.building)
+        useBuilding(constructedBuilding.used)
+    }
+}
+
+extension BuildingTableViewCell: BuildingUsedProtocol{
+    func useBuilding(_ used: Bool) {
         if used {
             isUsed.isHidden = false
             isUsed.image = UIColor.green.image()
@@ -57,5 +64,4 @@ class BuildingTableViewCell: UITableViewCell {
         }
         self.reloadInputViews()
     }
-    
 }

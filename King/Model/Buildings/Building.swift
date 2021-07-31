@@ -20,6 +20,13 @@ struct Building:Codable {
         }
         return false
     }
+    func checkToUse()->Bool{
+        let population = Population.shared
+        guard population.farmers.free() >= buildingPersons.farmers else {return false}
+        guard population.scientists.free() >= buildingPersons.scientists else {return false}
+        guard population.soldiers.free() >= buildingPersons.solders else {return false}
+        return true
+    }
 }
 
 struct BuildingCost:Codable {

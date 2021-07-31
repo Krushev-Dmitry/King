@@ -10,12 +10,11 @@ import UIKit
 @IBDesignable
 class BuildingsTableViewController: UITableViewController {
 
-    @IBOutlet weak var detailView: UIView!
     var buildings = ConstructedBuildings.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "BuildingTableViewCell", bundle: nil), forCellReuseIdentifier: "BuildingTableViewCell")
+        tableView.register(UINib(nibName: "ConstructedBuildingTableViewCell", bundle: nil), forCellReuseIdentifier: "ConstructedBuildingTableViewCell")
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -35,7 +34,7 @@ class BuildingsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BuildingTableViewCell", for: indexPath) as? BuildingTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ConstructedBuildingTableViewCell", for: indexPath) as? ConstructedBuildingTableViewCell
         cell?.configureCell(buildings.buildings[indexPath.row])
         // Configure the cell...
 

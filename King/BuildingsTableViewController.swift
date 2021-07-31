@@ -45,7 +45,10 @@ class BuildingsTableViewController: UITableViewController {
         let contextMenu = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { _ in
             
             var useBuilding = UIAction(title: "Заселить здание", image: UIImage(systemName: ""), attributes: []) { _ in
-                self.useBuilding(indexPath.row)
+                self.buildings.buildings[indexPath.row].use()
+            }
+            if !self.buildings.buildings[indexPath.row].building.checkToUse(){
+                useBuilding.attributes = .disabled
             }
             if self.buildings.buildings[indexPath.row].used {
                 useBuilding = UIAction(title: "Расселить здание", image: UIImage(systemName: ""), attributes: []) { _ in
@@ -57,7 +60,8 @@ class BuildingsTableViewController: UITableViewController {
                             default:
                                 break
                         }
-                    }                }
+                    }
+                }
             }
             let destroyBuilding = UIAction(title: "Снести здание", image: UIImage(systemName: "trash"), attributes: [.destructive]) { _ in
                 print("Здание \(self.buildings.buildings[indexPath.row].building.buildingName) снесено")
@@ -79,20 +83,4 @@ class BuildingsTableViewController: UITableViewController {
         return contextMenu
     }
     
-    func useBuilding(_ index: Int){
-        let population = Population.shared
-        if buildings.buildings[index].building.checkToUse(){
-            self.presentAlertWithTitle(title: "Заселить здание?", message: "Вы уверены, что хотите построить это здание?", options: "Нет", "Да") { (option) in
-                switch(option) {
-                    case 1:
-                        self.buildings.buildings[index].use()
-                        break
-                    default:
-                        break
-                }
-            }
-        } else {
-            self.presentAlertWithTitle(title: "Недостаточно людей для заселения постройки", message: "", options: "Ок"){_ in }
-        }
-    }
 }

@@ -17,12 +17,15 @@ class ConstructedBuilding{
     
     var dateWhenBeginBuildingUsed: Int = 0
     
-    init(_ building: Building, used: Bool = false) {
+    init(_ building: Building, isUsed: Bool = false) {
         self.building = building
-        self.used = used
+        self.used = isUsed
         Resources.shared.gold -= building.buildingCost.gold
         dateWhenBeginBuildingUsed = CurrentDate.shared.dateInt
-        delegate = nil
+        if isUsed {
+            self.use()
+        }
+        delegate?.useBuilding(isUsed)
     }
     
     func use(){
@@ -30,6 +33,7 @@ class ConstructedBuilding{
         print("Здание заселено и используется \(building.buildingName)")
         delegate?.useBuilding(used)
         changeResources()
+        changePopulation()
         dateWhenBeginBuildingUsed = CurrentDate.shared.dateInt
     }
     

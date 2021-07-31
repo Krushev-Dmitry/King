@@ -17,7 +17,7 @@ class ConstructedBuildings {
         buildings.remove(at: index)
     }
     func addNewBuilding(_ building: Building, isUsed: Bool = false){
-        let constructedBuilding = ConstructedBuilding(building, used: isUsed)
+        let constructedBuilding = ConstructedBuilding(building, isUsed: isUsed)
         buildings += [constructedBuilding]
     }
 

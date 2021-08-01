@@ -135,7 +135,7 @@
         <!--New Buildings Table View Controller-->
         <scene sceneID="Res-q8-CmT">
             <objects>
-                <tableViewController id="bAt-XS-ZXi" customClass="NewBuildingsTableViewController" customModule="King" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="NewBuildingsTableViewController" id="bAt-XS-ZXi" customClass="NewBuildingsTableViewController" customModule="King" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7tb-7u-DwY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

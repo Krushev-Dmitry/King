@@ -80,6 +80,12 @@ class NewBuildingsTableViewController: UITableViewController {
             print("построено новое здание \(building.buildingName),и заселено")
         }
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.isSelected = false
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super .viewDidDisappear(animated)
         CurrentDate.shared.removeListener(self)

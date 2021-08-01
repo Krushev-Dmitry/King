@@ -51,10 +51,10 @@ class ConstructedBuildingsTableViewController: UITableViewController {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
         cell.textLabel?.text = "Вы еще не построили ни одного здания"
         cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.font = UIFont(name: cell.textLabel?.font.fontName ?? "helvetica", size: 25)
+        cell.textLabel?.font = UIFont(name: UILabel().font.fontName, size: 22)
         cell.detailTextLabel?.text = "Постройте новое здание нажав наа ''+'' в правом верхнем углу"
         cell.detailTextLabel?.numberOfLines = 0
-        cell.detailTextLabel?.font = UIFont(name: cell.textLabel?.font.fontName ?? "helvetica", size: 18)
+        cell.detailTextLabel?.font = UIFont(name: UILabel().font.fontName, size: 18)
         cell.detailTextLabel?.textColor = .darkGray
         
         if !constructedBuildings.buildings.isEmpty{
@@ -105,6 +105,18 @@ class ConstructedBuildingsTableViewController: UITableViewController {
         }
         
         return contextMenu
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.isSelected = false
+
+        guard let cell = cell as? ConstructedBuildingTableViewCell else {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newBuildingsTableViewController = storyBoard.instantiateViewController(withIdentifier: "NewBuildingsTableViewController") as! NewBuildingsTableViewController
+            navigationController?.show(newBuildingsTableViewController, sender: self)
+            return
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-protocol ChangeDateProtocol: class {
+protocol ChangeDateProtocol: AnyObject {
     func dateChanged(date: Int)
 }
 class CurrentDate{
@@ -16,7 +16,7 @@ class CurrentDate{
     static let shared = CurrentDate()
 
     private init(){
-        let _ = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { [weak self] _ in
+        let _ = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { [weak self] _ in
             guard let self = self else {return}
             self.dateInt += 1
             self.listeners?.forEach({ element in

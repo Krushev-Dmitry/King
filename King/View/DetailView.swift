@@ -11,7 +11,7 @@ class DetailView: UIView {
     @IBOutlet weak var populationView: PopulationView!
     @IBOutlet weak var recourcesView: ResourcesView!
     @IBOutlet weak var dateView: UILabel!
-    
+        
     override init(frame: CGRect) {
         super .init(frame: frame)
         configureView()
@@ -32,11 +32,13 @@ class DetailView: UIView {
         view.layer.shadowOpacity = 1
         view.layer.shadowOffset = .zero
         view.layer.shadowRadius = 10
-        let currentData = CurrentDate.shared
-        dateChanged(date: currentData.dateInt)
          self.addSubview(view)
         self.backgroundColor = .white
         bounceCornerRadiusPersonsImage()
+        
+        dateView.text = String(CurrentDate.shared.dateInt)
+        fillPopulationData()
+        fillResourcesData()
     }
     
     func bounceCornerRadiusPersonsImage(){
@@ -71,12 +73,35 @@ class DetailView: UIView {
         recourcesView.food.label.text = String(resources.food)
         recourcesView.gold.label.text = String(resources.gold)
     }
+    
+    func startListenProtocols(){
+        CurrentDate.shared.appendListener(self)
+        Resources.shared.appendListener(self)
+        Population.shared.appendListener(self)
+    }
+    
+    func stopListenProtocols(){
+        CurrentDate.shared.removeListener(self)
+        Resources.shared.removeListener(self)
+        Population.shared.removeListener(self)
+    }
 }
 
 extension DetailView: ChangeDateProtocol{
     func dateChanged(date: Int) {
         dateView.text = String(date)
-        fillPopulationData()
+    }
+}
+
+extension DetailView: ResourcesProtocol{
+    func resourcesDidChange(scince: Int, force: Int, food: Int, gold: Int) {
         fillResourcesData()
     }
 }
+
+extension DetailView: PopulationProtocol{
+    func populationDidChange(farmers: Farmer, scientists: Scientist, solders: Soldier) {
+        fillPopulationData()
+    }
+}
+

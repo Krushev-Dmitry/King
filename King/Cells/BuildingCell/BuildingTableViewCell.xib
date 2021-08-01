@@ -105,11 +105,19 @@
                             <constraint firstAttribute="width" constant="30" id="tbY-5y-g4s"/>
                         </constraints>
                     </imageView>
+                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORL-IO-ivk">
+                        <rect key="frame" x="0.0" y="0.0" width="278" height="279"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ORL-IO-ivk" secondAttribute="bottom" id="43V-Qx-h7W"/>
                     <constraint firstItem="3IX-BY-T0B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="8tE-yQ-k4X"/>
                     <constraint firstItem="Mf3-7P-4yb" firstAttribute="leading" secondItem="GIJ-0D-BsO" secondAttribute="trailing" constant="5" id="9Fy-0v-JFF"/>
+                    <constraint firstAttribute="trailing" secondItem="ORL-IO-ivk" secondAttribute="trailing" id="AUD-2t-Pdr"/>
+                    <constraint firstItem="ORL-IO-ivk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="EOJ-KF-b2R"/>
                     <constraint firstItem="GIJ-0D-BsO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="EWt-Hf-gKt"/>
+                    <constraint firstItem="ORL-IO-ivk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RBc-0l-L5u"/>
                     <constraint firstItem="3IX-BY-T0B" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="WzC-xQ-k0y"/>
                     <constraint firstAttribute="trailing" secondItem="Mf3-7P-4yb" secondAttribute="trailing" constant="10" id="fc7-Bc-x9a"/>
                     <constraint firstItem="gpN-NO-Fn9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="hqy-s6-Jks"/>
@@ -122,6 +130,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="buildingName" destination="gpN-NO-Fn9" id="2Rm-Ba-XK1"/>
+                <outlet property="disableView" destination="ORL-IO-ivk" id="aqj-TV-mbl"/>
                 <outlet property="gold" destination="dF4-01-IOb" id="FeI-e7-NKG"/>
                 <outlet property="isUsed" destination="3IX-BY-T0B" id="PXI-iC-wIN"/>
                 <outlet property="population" destination="zUR-s5-puZ" id="PpJ-CC-G2Q"/>
@@ -135,6 +144,9 @@
         <image name="казарма" width="302" height="213"/>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

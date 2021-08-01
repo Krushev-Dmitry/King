@@ -20,7 +20,7 @@ class ConstructedBuilding{
     init(_ building: Building, isUsed: Bool = false) {
         self.building = building
         self.used = isUsed
-        Resources.shared.gold -= building.buildingCost.gold
+        Resources.shared.changeResources( gold: -building.buildingCost.gold)
         dateWhenBeginBuildingUsed = CurrentDate.shared.dateInt
         if isUsed {
             self.use()
@@ -48,23 +48,23 @@ class ConstructedBuilding{
     func changePopulation(){
         let population = Population.shared
         if used {
-            population.farmers.busy += building.buildingPersons.farmers
-            population.scientists.busy += building.buildingPersons.scientists
-            population.soldiers.busy += building.buildingPersons.solders
+            population.changeBusyPopulation(busyFarmers: building.buildingPersons.farmers,
+                                            busyScientists: building.buildingPersons.scientists,
+                                            busySoldiers: building.buildingPersons.solders)
         } else {
-            population.farmers.busy -= building.buildingPersons.farmers
-            population.scientists.busy -= building.buildingPersons.scientists
-            population.soldiers.busy -= building.buildingPersons.solders
+            population.changeBusyPopulation(busyFarmers: -building.buildingPersons.farmers,
+                                            busyScientists: -building.buildingPersons.scientists,
+                                            busySoldiers: -building.buildingPersons.solders)
         }
+
     }
     func changeResources(){
         let resources = Resources.shared
         if used {
-            resources.scince += building.buildingProduces.science
-            resources.force += building.buildingProduces.force
+
         } else {
-            resources.scince -= building.buildingProduces.science
-            resources.force -= building.buildingProduces.force
+            resources.changeResources(scince: -building.buildingProduces.science,
+                                      force: -building.buildingProduces.force)
         }
     }
     

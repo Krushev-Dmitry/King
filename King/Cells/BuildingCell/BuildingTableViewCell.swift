@@ -9,12 +9,19 @@ import UIKit
 
 class BuildingTableViewCell: UITableViewCell {
     @IBOutlet weak var isUsed: UIImageView!
+    @IBOutlet weak var disableView: UIView!
     @IBOutlet weak var buildingName: UILabel!
     @IBOutlet weak var gold: ResourceView!
     @IBOutlet weak var scince: ResourceView!
     @IBOutlet weak var population: PopulationView!
     @IBOutlet weak var produces: ResourcesView!
     var building: Building?
+    var disable: Bool = false {
+        didSet {
+            disableView.isHidden = !disable
+            self.selectionStyle = disable ? .none : .default
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,7 +35,8 @@ class BuildingTableViewCell: UITableViewCell {
     
     func configureCell(_ building: Building){
         self.building = building
-        self.isUsed.isHidden = true
+        let checkToBuild = building.checkBuildingCost()
+        self.disable = !checkToBuild
         self.isUsed.layer.cornerRadius = self.isUsed.frame.height/2
         buildingName.text = building.buildingName
         

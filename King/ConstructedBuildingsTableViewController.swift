@@ -19,8 +19,7 @@ class ConstructedBuildingsTableViewController: UITableViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        CurrentDate.shared.appendListener(self)
-        CurrentDate.shared.appendListener(detailView)
+        detailView.startListenProtocols()
         tableView.reloadData()
     }
     // MARK: - Table view data source
@@ -162,13 +161,7 @@ class ConstructedBuildingsTableViewController: UITableViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super .viewDidDisappear(animated)
-        CurrentDate.shared.removeListener(self)
-        CurrentDate.shared.removeListener(detailView)
+        detailView.stopListenProtocols()
     }
 }
 
-extension ConstructedBuildingsTableViewController: ChangeDateProtocol {
-    func dateChanged(date: Int) {
-
-    }
-}

@@ -8,14 +8,16 @@
 import Foundation
 
 class Person: Codable{
-    let food: Int?
-    let gold: Int?
+    let eatFood: Int?
+    let spendGold: Int?
     var count: Int = 0
     var busy = 0
+    
     init(food: Int = 0, gold: Int = 0) {
-        self.food = food
-        self.gold = gold
+        self.eatFood = food
+        self.spendGold = gold
     }
+    
     func free()->Int{
         return count-busy
     }

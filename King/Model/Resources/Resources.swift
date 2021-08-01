@@ -20,7 +20,7 @@ class Resources {
     }
     
     func collectResourcesFromBuildings(_ currentDate: Int){
-        let buildings = ConstructedBuildings.shared.buildings
+        let buildings = ConstructedBuildings.shared.constructedBuildings
         for building in buildings{
             if building.used {
                 let timeOfUsingBuildng = currentDate - building.dateWhenBeginBuildingUsed

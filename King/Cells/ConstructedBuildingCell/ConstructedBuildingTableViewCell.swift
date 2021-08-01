@@ -34,6 +34,7 @@ class ConstructedBuildingTableViewCell: UITableViewCell {
     
     func configureCell(_ constructedBuilding: ConstructedBuilding){
         constructedBuilding.delegate = self
+        self.constructedBuilding = constructedBuilding
         isUsed = constructedBuilding.used
         configureCell(constructedBuilding.building)
         useBuilding(constructedBuilding.used)

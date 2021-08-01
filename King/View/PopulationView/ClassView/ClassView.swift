@@ -24,9 +24,12 @@ class ClassView: UIView {
     
     private func configureView(){
         guard let view = self.loadViewFromNib(nibName: "ClassView") else {return}
-        image.layer.cornerRadius = image.frame.height/2
+        image.backgroundColor = .white
         view.frame = self.bounds
+        view.backgroundColor = nil
         self.addSubview(view)
+        self.backgroundColor = nil
+
     }
     
     

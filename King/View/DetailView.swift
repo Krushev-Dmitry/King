@@ -25,10 +25,34 @@ class DetailView: UIView {
     private func configureView(){
         guard let view = self.loadViewFromNib(nibName: "DetailView") else {return}
         view.frame = self.bounds
+        view.backgroundColor = UIColor(red: 0.941, green: 0.925, blue: 0.937, alpha: 1)
+//        view.backgroundColor = UIColor(cgColor: UIColor.white.withAlphaComponent(0.2).cgColor)
+        view.layer.masksToBounds = false
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = 1
+        view.layer.shadowOffset = .zero
+        view.layer.shadowRadius = 10
         let currentData = CurrentDate.shared
-        currentData.appendListener(self)
         dateChanged(date: currentData.dateInt)
          self.addSubview(view)
+        self.backgroundColor = .white
+        bounceCornerRadiusPersonsImage()
+    }
+    
+    func bounceCornerRadiusPersonsImage(){
+        if let person = populationView.farmers {
+        person.image.layer.cornerRadius = person.image.bounds.height/2
+        person.image.layer.masksToBounds = true
+        }
+        if let person = populationView.scientists {
+        person.image.layer.cornerRadius = person.image.bounds.height/2
+        person.image.layer.masksToBounds = true
+        }
+        if let person = populationView.soldiers {
+        person.image.layer.cornerRadius = person.image.bounds.height/2
+        person.image.layer.masksToBounds = true
+        }
+        
     }
     
     func fillPopulationData(){

@@ -14,6 +14,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.backgroundColor = UIColor(red: 0.941, green: 0.925, blue: 0.937, alpha: 1)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super .viewWillAppear(animated)
+        CurrentDate.shared.appendListener(detailView)
     }
 }
 

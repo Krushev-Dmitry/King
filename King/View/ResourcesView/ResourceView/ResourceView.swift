@@ -24,6 +24,8 @@ class ResourceView: UIView {
     private func configureView(){
         guard let view = self.loadViewFromNib(nibName: "ResourceView") else {return}
         view.frame = self.bounds
+        view.backgroundColor = nil
+        self.backgroundColor = nil
         self.addSubview(view)
     }
 }

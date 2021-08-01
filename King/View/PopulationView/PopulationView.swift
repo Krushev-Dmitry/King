@@ -29,6 +29,8 @@ class PopulationView: UIView {
         scientists.image.image = #imageLiteral(resourceName: "scientist")
         scientists.image.backgroundColor = .none
         view.frame = self.bounds
+        view.backgroundColor = nil
+        self.backgroundColor = nil
         self.addSubview(view)
     }
 }

@@ -15,11 +15,12 @@ class ConstructedBuildingsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        CurrentDate.shared.appendListener(self)
         tableView.register(UINib(nibName: "ConstructedBuildingTableViewCell", bundle: nil), forCellReuseIdentifier: "ConstructedBuildingTableViewCell")
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        CurrentDate.shared.appendListener(self)
+        CurrentDate.shared.appendListener(detailView)
         tableView.reloadData()
     }
     // MARK: - Table view data source
@@ -39,10 +40,10 @@ class ConstructedBuildingsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if constructedBuildings.buildings.isEmpty{
+        if constructedBuildings.constructedBuildings.isEmpty{
             return 1
         } else {
-        return constructedBuildings.buildings.count
+        return constructedBuildings.constructedBuildings.count
         }
     }
 
@@ -57,9 +58,9 @@ class ConstructedBuildingsTableViewController: UITableViewController {
         cell.detailTextLabel?.font = UIFont(name: UILabel().font.fontName, size: 18)
         cell.detailTextLabel?.textColor = .darkGray
         
-        if !constructedBuildings.buildings.isEmpty{
+        if !constructedBuildings.constructedBuildings.isEmpty{
             let cell = tableView.dequeueReusableCell(withIdentifier: "ConstructedBuildingTableViewCell", for: indexPath) as? ConstructedBuildingTableViewCell
-            cell?.configureCell(constructedBuildings.buildings[indexPath.row])
+            cell?.configureCell(constructedBuildings.constructedBuildings[indexPath.row])
             return cell ?? UITableViewCell()
         }
 
@@ -70,17 +71,17 @@ class ConstructedBuildingsTableViewController: UITableViewController {
         let contextMenu = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { _ in
             
             var useBuilding = UIAction(title: "Заселить здание", image: UIImage(systemName: ""), attributes: []) { _ in
-                self.constructedBuildings.buildings[indexPath.row].use()
+                self.constructedBuildings.constructedBuildings[indexPath.row].use()
             }
-            if !self.constructedBuildings.buildings[indexPath.row].building.checkToUse(){
+            if !self.constructedBuildings.constructedBuildings[indexPath.row].building.checkToUse(){
                 useBuilding.attributes = .disabled
             }
-            if self.constructedBuildings.buildings[indexPath.row].used {
+            if self.constructedBuildings.constructedBuildings[indexPath.row].used {
                 useBuilding = UIAction(title: "Расселить здание", image: UIImage(systemName: ""), attributes: []) { _ in
                     self.presentAlertWithTitle(title: "Расселить здание?", message: "Вы уверены, что хотите расселить это здание?", options: "Нет", "Да") { (option) in
                         switch(option) {
                             case 1:
-                                self.constructedBuildings.buildings[indexPath.row].notUse()
+                                self.constructedBuildings.constructedBuildings[indexPath.row].notUse()
                                 break
                             default:
                                 break
@@ -89,7 +90,7 @@ class ConstructedBuildingsTableViewController: UITableViewController {
                 }
             }
             let destroyBuilding = UIAction(title: "Снести здание", image: UIImage(systemName: "trash"), attributes: [.destructive]) { _ in
-                print("Здание \(self.constructedBuildings.buildings[indexPath.row].building.buildingName) снесено")
+                print("Здание \(self.constructedBuildings.constructedBuildings[indexPath.row].building.buildingName) снесено")
                 self.presentAlertWithTitle(title: "Снести здание?", message: "Вы уверены, что хотите снести это здание?", options: "Нет", "Да") { (option) in
                     switch(option) {
                         case 1:
@@ -108,23 +109,20 @@ class ConstructedBuildingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        cell?.isSelected = false
-
-        guard let cell = cell as? ConstructedBuildingTableViewCell else {
+        tableView.cellForRow(at: indexPath)?.isSelected = false
+        guard let cell = tableView.cellForRow(at: indexPath) as? ConstructedBuildingTableViewCell else {
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newBuildingsTableViewController = storyBoard.instantiateViewController(withIdentifier: "NewBuildingsTableViewController") as! NewBuildingsTableViewController
             navigationController?.show(newBuildingsTableViewController, sender: self)
-            return
-        }
+            return}
         guard let constructedBuilding = cell.constructedBuilding else {return}
         let building = constructedBuilding.building
-        let alertController = UIAlertController(title: building.buildingName, message: "", preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: building.buildingName, message: "Какие действия хотите провести с этим зданием?", preferredStyle: .actionSheet)
 
         if !constructedBuilding.used {
             if building.checkToUse() {
                 let useBuilding = UIAlertAction(title: "Заселить здание", style: .default) { (action) in
-                    self.constructedBuildings.buildings[indexPath.row].use()
+                    self.constructedBuildings.constructedBuildings[indexPath.row].use()
                 }
                 alertController.addAction(useBuilding)
             } else {
@@ -136,7 +134,7 @@ class ConstructedBuildingsTableViewController: UITableViewController {
                 self.presentAlertWithTitle(title: "Расселить здание?", message: "Вы уверены, что хотите расселить это здание?", options: "Нет", "Да") { (option) in
                     switch(option) {
                         case 1:
-                            self.constructedBuildings.buildings[indexPath.row].notUse()
+                            self.constructedBuildings.constructedBuildings[indexPath.row].notUse()
                             break
                         default:
                             break

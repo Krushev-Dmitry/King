@@ -21,15 +21,15 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTg-Cv-pW8" customClass="PopulationView" customModule="King" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="630" height="106.5"/>
+                    <rect key="frame" x="0.0" y="0.0" width="630" height="104"/>
                     <color key="backgroundColor" systemColor="systemGray2Color"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WtC-w4-mu0" customClass="ResourcesView" customModule="King" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="106.5" width="680" height="106.5"/>
+                    <rect key="frame" x="0.0" y="104" width="680" height="104"/>
                     <color key="backgroundColor" systemColor="systemGray3Color"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvO-RF-PhW">
-                    <rect key="frame" x="630" y="0.0" width="50" height="106.5"/>
+                    <rect key="frame" x="630" y="0.0" width="50" height="104"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="cy8-UT-43M"/>
                     </constraints>
@@ -51,7 +51,7 @@
                 <constraint firstItem="NvO-RF-PhW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qUN-Gp-PDR"/>
                 <constraint firstItem="NvO-RF-PhW" firstAttribute="leading" secondItem="pTg-Cv-pW8" secondAttribute="trailing" id="rOd-We-kmW"/>
                 <constraint firstItem="WtC-w4-mu0" firstAttribute="top" secondItem="pTg-Cv-pW8" secondAttribute="bottom" id="v6T-yt-6Bh"/>
-                <constraint firstItem="WtC-w4-mu0" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="ykQ-rU-WUP"/>
+                <constraint firstItem="WtC-w4-mu0" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="-5" id="ykQ-rU-WUP"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="269.56521739130437" y="-333.14732142857139"/>

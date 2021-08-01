@@ -11,15 +11,15 @@ import UIKit
 class NewBuildingsTableViewController: UITableViewController {
 
     let buildings = Buildings.shared
-    let detailView = DetailView()
+    let detailView = DetailView(frame: .zero)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        CurrentDate.shared.appendListener(self)
         tableView.register(UINib(nibName: "BuildingTableViewCell", bundle: nil), forCellReuseIdentifier: "BuildingTableViewCell")
     }
     override func viewWillAppear(_ animated: Bool) {
+        CurrentDate.shared.appendListener(self)
+        CurrentDate.shared.appendListener(detailView)
         tableView.reloadData()
     }
 

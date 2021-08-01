@@ -18,6 +18,8 @@
 		33063AB126B089DB00D7C55D /* ResourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33063AB026B089DB00D7C55D /* ResourceView.swift */; };
 		33063AB826B08A7400D7C55D /* ClassView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33063AB726B08A7400D7C55D /* ClassView.xib */; };
 		33162C2A26B2714E00F8F601 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33162C2926B2714E00F8F601 /* Resources.swift */; };
+		333100B626B6B96B00A001F0 /* UIView + roundCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333100B526B6B96B00A001F0 /* UIView + roundCorners.swift */; };
+		333100B826B6D3CE00A001F0 /* UIView+shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333100B726B6D3CE00A001F0 /* UIView+shadow.swift */; };
 		336647F026B36A8B00473BD7 /* ConstructedBuildingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647EF26B36A8B00473BD7 /* ConstructedBuildingsTableViewController.swift */; };
 		336647F226B3722400473BD7 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647F126B3722400473BD7 /* UIViewController+Alert.swift */; };
 		336647F426B385BF00473BD7 /* ConstructedBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647F326B385BF00473BD7 /* ConstructedBuilding.swift */; };
@@ -61,6 +63,8 @@
 		33063AB026B089DB00D7C55D /* ResourceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceView.swift; sourceTree = "<group>"; };
 		33063AB726B08A7400D7C55D /* ClassView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassView.xib; sourceTree = "<group>"; };
 		33162C2926B2714E00F8F601 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		333100B526B6B96B00A001F0 /* UIView + roundCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + roundCorners.swift"; sourceTree = "<group>"; };
+		333100B726B6D3CE00A001F0 /* UIView+shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+shadow.swift"; sourceTree = "<group>"; };
 		336647EF26B36A8B00473BD7 /* ConstructedBuildingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructedBuildingsTableViewController.swift; sourceTree = "<group>"; };
 		336647F126B3722400473BD7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		336647F326B385BF00473BD7 /* ConstructedBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructedBuilding.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 				33063A9226B079F900D7C55D /* King.xcdatamodeld */,
 				336647F726B473E800473BD7 /* UIColor image.swift */,
 				336647F126B3722400473BD7 /* UIViewController+Alert.swift */,
+				333100B526B6B96B00A001F0 /* UIView + roundCorners.swift */,
+				333100B726B6D3CE00A001F0 /* UIView+shadow.swift */,
 			);
 			path = King;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				336647F626B3908600473BD7 /* CurrentDate.swift in Sources */,
+				333100B626B6B96B00A001F0 /* UIView + roundCorners.swift in Sources */,
 				336B48E426B099E40076FC7A /* PopulationView.swift in Sources */,
 				33063A8E26B079F900D7C55D /* ViewController.swift in Sources */,
 				33063A8A26B079F900D7C55D /* AppDelegate.swift in Sources */,
@@ -369,6 +376,7 @@
 				33BAEB6826B58BC8001FB528 /* ConstructedBuildingTableViewCell.swift in Sources */,
 				336B490326B25D150076FC7A /* Person.swift in Sources */,
 				336B48F926B0BF3D0076FC7A /* Building.swift in Sources */,
+				333100B826B6D3CE00A001F0 /* UIView+shadow.swift in Sources */,
 				336B48E826B09DD90076FC7A /* NewBuildingsTableViewController.swift in Sources */,
 				336B490026B0CF960076FC7A /* ConstructedBuildings.swift in Sources */,
 				336B48D926B08E970076FC7A /* ResourcesView.swift in Sources */,

@@ -31,6 +31,8 @@ class ResourcesView: UIView {
         force.image.image = #imageLiteral(resourceName: "raid")
         food.image.image = #imageLiteral(resourceName: "food")
         gold.image.image = #imageLiteral(resourceName: "gold")
+        view.backgroundColor = nil
+        self.backgroundColor = nil
         self.addSubview(view)
     }
 }

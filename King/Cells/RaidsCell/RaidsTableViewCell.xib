@@ -25,9 +25,9 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Потери после нападения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dll-Xb-r2z">
-                        <rect key="frame" x="109" y="2" width="268" height="48.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="109" y="30" width="268" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" systemColor="systemBackgroundColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cko-DQ-HHW">
@@ -47,7 +47,17 @@
                             <constraint firstItem="GoZ-NT-EwZ" firstAttribute="width" secondItem="JIt-R2-8vv" secondAttribute="width" id="WYd-ld-0ER"/>
                         </constraints>
                     </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата нападения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6c-gg-TYK">
+                        <rect key="frame" x="109" y="0.0" width="278" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="jCd-lN-5i8"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
+                <color key="backgroundColor" systemColor="systemRedColor"/>
                 <constraints>
                     <constraint firstItem="6te-Q6-mrk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="MJt-wB-Etc"/>
                     <constraint firstItem="cko-DQ-HHW" firstAttribute="trailing" secondItem="dll-Xb-r2z" secondAttribute="trailing" id="PfV-MC-TB8"/>
@@ -55,21 +65,39 @@
                     <constraint firstItem="6te-Q6-mrk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QND-N2-05f"/>
                     <constraint firstAttribute="bottom" secondItem="cko-DQ-HHW" secondAttribute="bottom" constant="2" id="WAz-iC-Y8a"/>
                     <constraint firstItem="6te-Q6-mrk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZR8-8G-sqe"/>
+                    <constraint firstItem="dll-Xb-r2z" firstAttribute="top" secondItem="H6c-gg-TYK" secondAttribute="bottom" id="aMC-EE-YUb"/>
+                    <constraint firstItem="H6c-gg-TYK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bVx-4y-zde"/>
+                    <constraint firstItem="H6c-gg-TYK" firstAttribute="leading" secondItem="6te-Q6-mrk" secondAttribute="trailing" constant="5" id="dE2-L6-7fq"/>
                     <constraint firstAttribute="trailing" secondItem="dll-Xb-r2z" secondAttribute="trailing" constant="10" id="efw-tp-qZC"/>
                     <constraint firstItem="dll-Xb-r2z" firstAttribute="leading" secondItem="6te-Q6-mrk" secondAttribute="trailing" constant="5" id="fT4-17-aUT"/>
+                    <constraint firstAttribute="trailing" secondItem="H6c-gg-TYK" secondAttribute="trailing" id="gUn-vT-Qtn"/>
                     <constraint firstItem="cko-DQ-HHW" firstAttribute="leading" secondItem="dll-Xb-r2z" secondAttribute="leading" id="s5f-jV-5pp"/>
-                    <constraint firstItem="dll-Xb-r2z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="zet-fm-fKo"/>
                     <constraint firstItem="cko-DQ-HHW" firstAttribute="top" secondItem="dll-Xb-r2z" secondAttribute="bottom" constant="2" id="zxO-E2-4B0"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLabel" destination="H6c-gg-TYK" id="WGT-bm-1I3"/>
+                <outlet property="foodView" destination="GoZ-NT-EwZ" id="50H-Ts-FkL"/>
+                <outlet property="goldView" destination="JIt-R2-8vv" id="Ldu-uM-Y8V"/>
+                <outlet property="raidLabel" destination="dll-Xb-r2z" id="l2q-8F-MRn"/>
+            </connections>
             <point key="canvasLocation" x="141.30434782608697" y="109.15178571428571"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="raid" width="104" height="76"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

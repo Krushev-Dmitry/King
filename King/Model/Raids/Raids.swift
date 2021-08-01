@@ -18,7 +18,9 @@ class Raids {
     var listeners: [RaidsProtocol]?
 
     static let shared = Raids()
-    private init(){}
+    private init(){
+        CurrentDate.shared.appendListener(self)
+    }
     
     func raidOn(){
         let resources = Resources.shared
@@ -29,6 +31,7 @@ class Raids {
             let loot = Loot(gold: resources.gold*30/100,
                             food: resources.food*30/100)
             raid = Raid(dateOfRaid: CurrentDate.shared.dateInt, sucsessOfRaid: true, loot: loot)
+            resources.changeResources(food: -loot.food, gold: -loot.gold)
         } else {
             raid = Raid(dateOfRaid: CurrentDate.shared.dateInt)
         }

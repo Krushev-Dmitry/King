@@ -20,12 +20,12 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super .viewWillAppear(animated)
-        print(1/(1+exp(-(Double(resources.force)/Double(resources.gold)))))
-        detailView.stopListenProtocols()
+        detailView.startListenProtocols()
+
     }
     override func viewDidDisappear(_ animated: Bool) {
         super .viewDidDisappear(animated)
-        detailView.startListenProtocols()
+        detailView.stopListenProtocols()
     }
 }
 

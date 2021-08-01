@@ -100,7 +100,7 @@
         <!--Постройки-->
         <scene sceneID="FN5-1X-ZT0">
             <objects>
-                <tableViewController id="Dmx-Mh-rac" customClass="BuildingsTableViewController" customModule="King" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Dmx-Mh-rac" customClass="ConstructedBuildingsTableViewController" customModule="King" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pt2-uu-AXf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

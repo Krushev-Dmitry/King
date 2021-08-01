@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-class BuildingsTableViewController: UITableViewController {
+class ConstructedBuildingsTableViewController: UITableViewController {
 
     var constructedBuildings = ConstructedBuildings.shared
     let detailView = DetailView()
@@ -39,15 +39,31 @@ class BuildingsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if constructedBuildings.buildings.isEmpty{
+            return 1
+        } else {
         return constructedBuildings.buildings.count
+        }
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ConstructedBuildingTableViewCell", for: indexPath) as? ConstructedBuildingTableViewCell
-        cell?.configureCell(constructedBuildings.buildings[indexPath.row])
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+        cell.textLabel?.text = "Вы еще не построили ни одного здания"
+        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.font = UIFont(name: cell.textLabel?.font.fontName ?? "helvetica", size: 25)
+        cell.detailTextLabel?.text = "Постройте новое здание нажав наа ''+'' в правом верхнем углу"
+        cell.detailTextLabel?.numberOfLines = 0
+        cell.detailTextLabel?.font = UIFont(name: cell.textLabel?.font.fontName ?? "helvetica", size: 18)
+        cell.detailTextLabel?.textColor = .darkGray
+        
+        if !constructedBuildings.buildings.isEmpty{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ConstructedBuildingTableViewCell", for: indexPath) as? ConstructedBuildingTableViewCell
+            cell?.configureCell(constructedBuildings.buildings[indexPath.row])
+            return cell ?? UITableViewCell()
+        }
 
-        return cell ?? UITableViewCell()
+        return cell
     }
     
     override func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
@@ -84,7 +100,6 @@ class BuildingsTableViewController: UITableViewController {
                             break
                     }
                 }
-
             }
             return UIMenu(title: "", children: [useBuilding,destroyBuilding])
         }
@@ -99,7 +114,7 @@ class BuildingsTableViewController: UITableViewController {
     }
 }
 
-extension BuildingsTableViewController: ChangeDateProtocol {
+extension ConstructedBuildingsTableViewController: ChangeDateProtocol {
     func dateChanged(date: Int) {
 
     }

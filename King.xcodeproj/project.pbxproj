@@ -18,7 +18,7 @@
 		33063AB126B089DB00D7C55D /* ResourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33063AB026B089DB00D7C55D /* ResourceView.swift */; };
 		33063AB826B08A7400D7C55D /* ClassView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33063AB726B08A7400D7C55D /* ClassView.xib */; };
 		33162C2A26B2714E00F8F601 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33162C2926B2714E00F8F601 /* Resources.swift */; };
-		336647F026B36A8B00473BD7 /* BuildingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647EF26B36A8B00473BD7 /* BuildingsTableViewController.swift */; };
+		336647F026B36A8B00473BD7 /* ConstructedBuildingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647EF26B36A8B00473BD7 /* ConstructedBuildingsTableViewController.swift */; };
 		336647F226B3722400473BD7 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647F126B3722400473BD7 /* UIViewController+Alert.swift */; };
 		336647F426B385BF00473BD7 /* ConstructedBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647F326B385BF00473BD7 /* ConstructedBuilding.swift */; };
 		336647F626B3908600473BD7 /* CurrentDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647F526B3908600473BD7 /* CurrentDate.swift */; };
@@ -61,7 +61,7 @@
 		33063AB026B089DB00D7C55D /* ResourceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceView.swift; sourceTree = "<group>"; };
 		33063AB726B08A7400D7C55D /* ClassView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassView.xib; sourceTree = "<group>"; };
 		33162C2926B2714E00F8F601 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
-		336647EF26B36A8B00473BD7 /* BuildingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsTableViewController.swift; sourceTree = "<group>"; };
+		336647EF26B36A8B00473BD7 /* ConstructedBuildingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructedBuildingsTableViewController.swift; sourceTree = "<group>"; };
 		336647F126B3722400473BD7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		336647F326B385BF00473BD7 /* ConstructedBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructedBuilding.swift; sourceTree = "<group>"; };
 		336647F526B3908600473BD7 /* CurrentDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDate.swift; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 				33063A8B26B079F900D7C55D /* SceneDelegate.swift */,
 				33063A8D26B079F900D7C55D /* ViewController.swift */,
 				33063A8F26B079F900D7C55D /* Main.storyboard */,
-				336647EF26B36A8B00473BD7 /* BuildingsTableViewController.swift */,
+				336647EF26B36A8B00473BD7 /* ConstructedBuildingsTableViewController.swift */,
 				336B48E726B09DD90076FC7A /* NewBuildingsTableViewController.swift */,
 				336B48E926B09E060076FC7A /* RaidsTableViewController.swift */,
 				336B48F126B0B8560076FC7A /* Cells */,
@@ -361,7 +361,7 @@
 				336B48EA26B09E060076FC7A /* RaidsTableViewController.swift in Sources */,
 				336B48DF26B094150076FC7A /* UIView+xib.swift in Sources */,
 				336647F826B473E800473BD7 /* UIColor image.swift in Sources */,
-				336647F026B36A8B00473BD7 /* BuildingsTableViewController.swift in Sources */,
+				336647F026B36A8B00473BD7 /* ConstructedBuildingsTableViewController.swift in Sources */,
 				33BAEB6126B56F21001FB528 /* DetailView.swift in Sources */,
 				336647F426B385BF00473BD7 /* ConstructedBuilding.swift in Sources */,
 				336647F226B3722400473BD7 /* UIViewController+Alert.swift in Sources */,

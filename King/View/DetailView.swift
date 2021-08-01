@@ -26,7 +26,7 @@ class DetailView: UIView {
         guard let view = self.loadViewFromNib(nibName: "DetailView") else {return}
         view.frame = self.bounds
         let currentData = CurrentDate.shared
-        currentData.appendDelegate(self)
+        currentData.appendListener(self)
         dateChanged(date: currentData.dateInt)
          self.addSubview(view)
     }
@@ -47,7 +47,6 @@ class DetailView: UIView {
         recourcesView.food.label.text = String(resources.food)
         recourcesView.gold.label.text = String(resources.gold)
     }
-
 }
 
 extension DetailView: ChangeDateProtocol{

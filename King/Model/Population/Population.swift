@@ -13,7 +13,7 @@ class Population {
     var scientists = Scientist(count: 1)
     var soldiers = Soldier(count: 1)
     private init(){
-        CurrentDate.shared.appendDelegate(self)
+        CurrentDate.shared.appendListener(self)
     }
 }
 

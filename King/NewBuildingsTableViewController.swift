@@ -11,12 +11,16 @@ import UIKit
 class NewBuildingsTableViewController: UITableViewController {
 
     let buildings = Buildings.shared
+    let detailView = DetailView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        CurrentDate.shared.appendDelegate(self)
+        CurrentDate.shared.appendListener(self)
         tableView.register(UINib(nibName: "BuildingTableViewCell", bundle: nil), forCellReuseIdentifier: "BuildingTableViewCell")
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -26,8 +30,9 @@ class NewBuildingsTableViewController: UITableViewController {
         return 1
     }
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return DetailView(frame: .null)
+        return detailView
     }
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 100
     }
@@ -77,7 +82,8 @@ class NewBuildingsTableViewController: UITableViewController {
     }
     override func viewDidDisappear(_ animated: Bool) {
         super .viewDidDisappear(animated)
-        CurrentDate.shared.removeDelegate(self)
+        CurrentDate.shared.removeListener(self)
+        CurrentDate.shared.removeListener(detailView)
     }
 }
 

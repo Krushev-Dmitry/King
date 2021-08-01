@@ -16,7 +16,7 @@ class Resources {
 
     static let shared = Resources()
     private init(){
-        CurrentDate.shared.appendDelegate(self)
+        CurrentDate.shared.appendListener(self)
     }
     
     func collectResourcesFromBuildings(_ currentDate: Int){
@@ -51,6 +51,6 @@ extension Resources: ChangeDateProtocol{
     func dateChanged(date: Int) {
         collectResourcesFromBuildings(date)
         populationSpentResources()
-        description()
+//        description()
     }
 }

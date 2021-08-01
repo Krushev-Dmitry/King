@@ -26,7 +26,8 @@ class ConstructedBuildingTableViewCell: UITableViewCell {
     
     func configureCell(_ building: Building){
         self.building = building
-        self.isUsedLabel.layer.cornerRadius = 5
+        self.isUsedLabel.layer.cornerRadius = 10
+        self.isUsedLabel.layer.masksToBounds = true
         buildingName.text = building.buildingName
         feelProducts()
     }

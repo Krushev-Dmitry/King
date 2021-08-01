@@ -21,7 +21,7 @@
 		336647F026B36A8B00473BD7 /* BuildingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647EF26B36A8B00473BD7 /* BuildingsTableViewController.swift */; };
 		336647F226B3722400473BD7 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647F126B3722400473BD7 /* UIViewController+Alert.swift */; };
 		336647F426B385BF00473BD7 /* ConstructedBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647F326B385BF00473BD7 /* ConstructedBuilding.swift */; };
-		336647F626B3908600473BD7 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647F526B3908600473BD7 /* Date.swift */; };
+		336647F626B3908600473BD7 /* CurrentDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647F526B3908600473BD7 /* CurrentDate.swift */; };
 		336647F826B473E800473BD7 /* UIColor image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647F726B473E800473BD7 /* UIColor image.swift */; };
 		336B48D726B08D480076FC7A /* ClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B48D626B08D480076FC7A /* ClassView.swift */; };
 		336B48D926B08E970076FC7A /* ResourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B48D826B08E970076FC7A /* ResourcesView.swift */; };
@@ -64,7 +64,7 @@
 		336647EF26B36A8B00473BD7 /* BuildingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsTableViewController.swift; sourceTree = "<group>"; };
 		336647F126B3722400473BD7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		336647F326B385BF00473BD7 /* ConstructedBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructedBuilding.swift; sourceTree = "<group>"; };
-		336647F526B3908600473BD7 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		336647F526B3908600473BD7 /* CurrentDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDate.swift; sourceTree = "<group>"; };
 		336647F726B473E800473BD7 /* UIColor image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor image.swift"; sourceTree = "<group>"; };
 		336B48D626B08D480076FC7A /* ClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassView.swift; sourceTree = "<group>"; };
 		336B48D826B08E970076FC7A /* ResourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesView.swift; sourceTree = "<group>"; };
@@ -235,7 +235,7 @@
 		336B48FA26B0C1F80076FC7A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				336647F526B3908600473BD7 /* Date.swift */,
+				336647F526B3908600473BD7 /* CurrentDate.swift */,
 				33162C2826B2713700F8F601 /* Resources */,
 				33162C2726B2712900F8F601 /* Population */,
 				336B490126B25CF80076FC7A /* Buildings */,
@@ -354,7 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				336647F626B3908600473BD7 /* Date.swift in Sources */,
+				336647F626B3908600473BD7 /* CurrentDate.swift in Sources */,
 				336B48E426B099E40076FC7A /* PopulationView.swift in Sources */,
 				33063A8E26B079F900D7C55D /* ViewController.swift in Sources */,
 				33063A8A26B079F900D7C55D /* AppDelegate.swift in Sources */,

@@ -23,6 +23,7 @@
 		3348EBF626B719CF0028FE1D /* Farmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348EBF526B719CF0028FE1D /* Farmer.swift */; };
 		3348EBF826B719F00028FE1D /* Scientist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348EBF726B719F00028FE1D /* Scientist.swift */; };
 		3348EBFA26B71A210028FE1D /* Soldier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348EBF926B71A210028FE1D /* Soldier.swift */; };
+		3348EBFD26B73A490028FE1D /* Raids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3348EBFC26B73A480028FE1D /* Raids.swift */; };
 		336647F026B36A8B00473BD7 /* ConstructedBuildingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647EF26B36A8B00473BD7 /* ConstructedBuildingsTableViewController.swift */; };
 		336647F226B3722400473BD7 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647F126B3722400473BD7 /* UIViewController+Alert.swift */; };
 		336647F426B385BF00473BD7 /* ConstructedBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336647F326B385BF00473BD7 /* ConstructedBuilding.swift */; };
@@ -71,6 +72,7 @@
 		3348EBF526B719CF0028FE1D /* Farmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Farmer.swift; sourceTree = "<group>"; };
 		3348EBF726B719F00028FE1D /* Scientist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scientist.swift; sourceTree = "<group>"; };
 		3348EBF926B71A210028FE1D /* Soldier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Soldier.swift; sourceTree = "<group>"; };
+		3348EBFC26B73A480028FE1D /* Raids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Raids.swift; sourceTree = "<group>"; };
 		336647EF26B36A8B00473BD7 /* ConstructedBuildingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructedBuildingsTableViewController.swift; sourceTree = "<group>"; };
 		336647F126B3722400473BD7 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		336647F326B385BF00473BD7 /* ConstructedBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructedBuilding.swift; sourceTree = "<group>"; };
@@ -200,6 +202,22 @@
 			path = persons;
 			sourceTree = "<group>";
 		};
+		3348EBFE26B73A500028FE1D /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				336647F526B3908600473BD7 /* CurrentDate.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		3348EBFF26B73A620028FE1D /* Raids */ = {
+			isa = PBXGroup;
+			children = (
+				3348EBFC26B73A480028FE1D /* Raids.swift */,
+			);
+			path = Raids;
+			sourceTree = "<group>";
+		};
 		336B48DC26B0900B0076FC7A /* ResourcesView */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,7 +276,8 @@
 		336B48FA26B0C1F80076FC7A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				336647F526B3908600473BD7 /* CurrentDate.swift */,
+				3348EBFF26B73A620028FE1D /* Raids */,
+				3348EBFE26B73A500028FE1D /* Date */,
 				33162C2826B2713700F8F601 /* Resources */,
 				33162C2726B2712900F8F601 /* Population */,
 				336B490126B25CF80076FC7A /* Buildings */,
@@ -402,6 +421,7 @@
 				336B48D726B08D480076FC7A /* ClassView.swift in Sources */,
 				33162C2A26B2714E00F8F601 /* Resources.swift in Sources */,
 				336B48FE26B0CE220076FC7A /* Buildings.swift in Sources */,
+				3348EBFD26B73A490028FE1D /* Raids.swift in Sources */,
 				336B48EF26B0A6560076FC7A /* BuildingTableViewCell.swift in Sources */,
 				33063A9426B079F900D7C55D /* King.xcdatamodeld in Sources */,
 				33063A8C26B079F900D7C55D /* SceneDelegate.swift in Sources */,

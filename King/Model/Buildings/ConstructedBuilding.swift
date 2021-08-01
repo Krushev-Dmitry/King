@@ -61,6 +61,8 @@ class ConstructedBuilding{
     func changeResources(){
         let resources = Resources.shared
         if used {
+            resources.changeResources(scince: building.buildingProduces.science,
+                                      force: building.buildingProduces.force)
 
         } else {
             resources.changeResources(scince: -building.buildingProduces.science,

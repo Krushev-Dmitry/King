@@ -17,13 +17,15 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.backgroundColor = UIColor(red: 0.941, green: 0.925, blue: 0.937, alpha: 1)
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super .viewDidDisappear(animated)
-        CurrentDate.shared.removeListener(detailView)
-    }
+
     override func viewWillAppear(_ animated: Bool) {
         super .viewWillAppear(animated)
-        CurrentDate.shared.appendListener(detailView)
+        print(1/(1+exp(-(Double(resources.force)/Double(resources.gold)))))
+        detailView.stopListenProtocols()
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super .viewDidDisappear(animated)
+        detailView.startListenProtocols()
     }
 }
 

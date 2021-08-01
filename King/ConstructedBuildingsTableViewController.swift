@@ -117,6 +117,49 @@ class ConstructedBuildingsTableViewController: UITableViewController {
             navigationController?.show(newBuildingsTableViewController, sender: self)
             return
         }
+        guard let constructedBuilding = cell.constructedBuilding else {return}
+        let building = constructedBuilding.building
+        let alertController = UIAlertController(title: building.buildingName, message: "", preferredStyle: .actionSheet)
+
+        if !constructedBuilding.used {
+            if building.checkToUse() {
+                let useBuilding = UIAlertAction(title: "Заселить здание", style: .default) { (action) in
+                    self.constructedBuildings.buildings[indexPath.row].use()
+                }
+                alertController.addAction(useBuilding)
+            } else {
+                let useBuilding = UIAlertAction(title: "Не хватает людей для заселения здания", style: .cancel)
+                alertController.addAction(useBuilding)
+            }
+        } else {
+            let useBuilding = UIAlertAction(title: "Расселить здание", style: .default) { (action) in
+                self.presentAlertWithTitle(title: "Расселить здание?", message: "Вы уверены, что хотите расселить это здание?", options: "Нет", "Да") { (option) in
+                    switch(option) {
+                        case 1:
+                            self.constructedBuildings.buildings[indexPath.row].notUse()
+                            break
+                        default:
+                            break
+                    }
+                }
+            }
+            alertController.addAction(useBuilding)
+        }
+        let destroyBuilding = UIAlertAction(title: "Снести здание", style: .destructive) { (action) in
+            self.presentAlertWithTitle(title: "Снести здание?", message: "Вы уверены, что хотите снести это здание?", options: "Нет", "Да") { (option) in
+                switch(option) {
+                    case 1:
+                        self.constructedBuildings.destroy(index: indexPath.row)
+                        self.tableView.reloadData()
+                        break
+                    default:
+                        break
+                }
+            }
+        }
+        alertController.addAction(destroyBuilding)
+        alertController.addAction(UIAlertAction(title: "Отмена", style: .cancel))
+        self.present(alertController, animated: true, completion: nil)
     }
     
     override func viewDidDisappear(_ animated: Bool) {

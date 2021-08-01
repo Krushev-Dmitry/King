@@ -117,11 +117,13 @@ class NewBuildingsTableViewController: UITableViewController {
 extension NewBuildingsTableViewController:ResourcesProtocol{
     func resourcesDidChange(scince: Int, force: Int, food: Int, gold: Int) {
         for (index,building) in buildings.enumerated(){
-            guard let cell = tableView.cellForRow(at: IndexPath(row: 0, section: index)) as? BuildingTableViewCell else {return}
-            let checkToBuild = building.checkBuildingCost()
-            if checkToBuild == cell.disable {
-                cell.disable = !checkToBuild
-                tableView.reloadData()
+//            tableView(tableView, cellForRowAt: IndexPath(row: 0, section: index))
+            if let cell = tableView(tableView, cellForRowAt: IndexPath(row: 0, section: index)) as? BuildingTableViewCell {
+                let checkToBuild = building.checkBuildingCost()
+                if checkToBuild == cell.disable {
+                    cell.disable = !checkToBuild
+                    tableView.reloadData()
+                }
             }
         }
     }

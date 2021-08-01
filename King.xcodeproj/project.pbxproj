@@ -142,15 +142,11 @@
 				336B48F126B0B8560076FC7A /* Cells */,
 				336B48FA26B0C1F80076FC7A /* Model */,
 				33BAEB5F26B56EDC001FB528 /* View */,
+				336B48DD26B093F90076FC7A /* Extentions */,
 				33063A9526B079FA00D7C55D /* Assets.xcassets */,
 				33063A9726B079FA00D7C55D /* LaunchScreen.storyboard */,
 				33063A9A26B079FA00D7C55D /* Info.plist */,
-				336B48DD26B093F90076FC7A /* Extention */,
 				33063A9226B079F900D7C55D /* King.xcdatamodeld */,
-				336647F726B473E800473BD7 /* UIColor image.swift */,
-				336647F126B3722400473BD7 /* UIViewController+Alert.swift */,
-				333100B526B6B96B00A001F0 /* UIView + roundCorners.swift */,
-				333100B726B6D3CE00A001F0 /* UIView+shadow.swift */,
 			);
 			path = King;
 			sourceTree = "<group>";
@@ -218,6 +214,24 @@
 			path = Raids;
 			sourceTree = "<group>";
 		};
+		3348EC0026B749460028FE1D /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				33BAEB6026B56F21001FB528 /* DetailView.swift */,
+				33BAEB6426B582BC001FB528 /* DetailView.xib */,
+				33063AA626B0890C00D7C55D /* PopulationView */,
+				336B48DC26B0900B0076FC7A /* ResourcesView */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		3348EC0126B749BD0028FE1D /* RaidTimeView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RaidTimeView;
+			sourceTree = "<group>";
+		};
 		336B48DC26B0900B0076FC7A /* ResourcesView */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,12 +242,16 @@
 			path = ResourcesView;
 			sourceTree = "<group>";
 		};
-		336B48DD26B093F90076FC7A /* Extention */ = {
+		336B48DD26B093F90076FC7A /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				336647F726B473E800473BD7 /* UIColor image.swift */,
+				336647F126B3722400473BD7 /* UIViewController+Alert.swift */,
+				333100B526B6B96B00A001F0 /* UIView + roundCorners.swift */,
+				333100B726B6D3CE00A001F0 /* UIView+shadow.swift */,
 				336B48DE26B094150076FC7A /* UIView+xib.swift */,
 			);
-			path = Extention;
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 		336B48E026B098CD0076FC7A /* ClassView */ = {
@@ -300,10 +318,8 @@
 		33BAEB5F26B56EDC001FB528 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				33BAEB6026B56F21001FB528 /* DetailView.swift */,
-				33BAEB6426B582BC001FB528 /* DetailView.xib */,
-				336B48DC26B0900B0076FC7A /* ResourcesView */,
-				33063AA626B0890C00D7C55D /* PopulationView */,
+				3348EC0126B749BD0028FE1D /* RaidTimeView */,
+				3348EC0026B749460028FE1D /* DetailView */,
 			);
 			path = View;
 			sourceTree = "<group>";

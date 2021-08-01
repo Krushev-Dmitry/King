@@ -16,9 +16,9 @@ class Population {
     private init(){
         CurrentDate.shared.appendListener(self)
     }
-    var farmers = Farmer(count: 3)
-    var scientists = Scientist(count: 1)
-    var soldiers = Soldier(count: 1)
+    var farmers = Farmer(count: 20)
+    var scientists = Scientist(count: 10)
+    var soldiers = Soldier(count: 10)
     
     var listeners: [PopulationProtocol]?
     

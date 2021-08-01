@@ -10,7 +10,7 @@ import UIKit
 class DetailView: UIView {
     @IBOutlet weak var populationView: PopulationView!
     @IBOutlet weak var recourcesView: ResourcesView!
-    @IBOutlet weak var dateView: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
         
     override init(frame: CGRect) {
         super .init(frame: frame)
@@ -36,7 +36,7 @@ class DetailView: UIView {
         self.backgroundColor = .white
         bounceCornerRadiusPersonsImage()
         
-        dateView.text = String(CurrentDate.shared.dateInt)
+        dateLabel.text = String(CurrentDate.shared.dateInt)
         fillPopulationData()
         fillResourcesData()
     }
@@ -89,7 +89,7 @@ class DetailView: UIView {
 
 extension DetailView: ChangeDateProtocol{
     func dateChanged(date: Int) {
-        dateView.text = String(date)
+        dateLabel.text = String(date)
     }
 }
 

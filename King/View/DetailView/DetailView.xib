@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailView" customModule="King" customModuleProvider="target">
             <connections>
-                <outlet property="dateView" destination="NvO-RF-PhW" id="8C5-cN-s8P"/>
+                <outlet property="dateLabel" destination="NvO-RF-PhW" id="8C5-cN-s8P"/>
                 <outlet property="populationView" destination="pTg-Cv-pW8" id="hvD-GF-SY8"/>
                 <outlet property="recourcesView" destination="WtC-w4-mu0" id="Z0y-HT-2Hj"/>
             </connections>

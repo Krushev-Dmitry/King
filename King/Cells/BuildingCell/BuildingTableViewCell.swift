@@ -55,21 +55,7 @@ class BuildingTableViewCell: UITableViewCell {
     }
     
     func configureCell(_ constructedBuilding: ConstructedBuilding){
-        constructedBuilding.delegate = self
         configureCell(constructedBuilding.building)
-        useBuilding(constructedBuilding.used)
     }
 }
 
-extension BuildingTableViewCell: BuildingUsedProtocol{
-    func useBuilding(_ used: Bool) {
-        if used {
-            isUsed.isHidden = false
-            isUsed.image = UIColor.green.image()
-        } else {
-            isUsed.isHidden = false
-            isUsed.image = UIColor.red.image()
-        }
-        self.reloadInputViews()
-    }
-}

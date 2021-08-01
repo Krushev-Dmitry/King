@@ -14,8 +14,8 @@ protocol ResourcesProtocol: AnyObject {
 class Resources {
     var scince: Int = 0
     var force: Int = 0
-    var food: Int = 100
-    var gold: Int = 150
+    var food: Int = 10000
+    var gold: Int = 15000
     let collectionFromBuildingsTimer = 2
     
     var listeners: [ResourcesProtocol]?
